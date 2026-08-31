@@ -33,7 +33,7 @@
             line-height: 1.6;
         }
 
-        /* Language Toggle Rules */
+        /* Rules para cambio de idioma */
         body.lang-es .lang-en { display: none !important; }
         body.lang-en .lang-es { display: none !important; }
 
@@ -85,7 +85,6 @@
             color: var(--white);
         }
 
-        /* Language Switcher Buttons */
         .lang-switch {
             display: flex;
             background-color: #1e293b;
@@ -209,6 +208,12 @@
             transform: translateY(-2px);
         }
 
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .btn-outline {
             background-color: transparent;
             color: var(--white);
@@ -316,7 +321,7 @@
             font-size: 0.95rem;
         }
 
-        /* Services / Value Map */
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -396,7 +401,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Section: About Me / Acerca de Mi */
+        /* About Section */
         .about-bg {
             background-color: var(--bg-light);
             border-top: 1px solid var(--border);
@@ -529,7 +534,7 @@
             line-height: 1.5;
         }
 
-        /* Contact Section & Form Styling */
+        /* Contact Section & Dynamic Form Styling */
         .contact-section {
             background: linear-gradient(135deg, var(--primary) 0%, #090d16 100%);
             color: var(--white);
@@ -558,6 +563,36 @@
         .contact-header p {
             color: #94a3b8;
             font-size: 1.1rem;
+        }
+
+        /* Estilos dinámicos para notificaciones de estado */
+        .fs-status-msg {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none; /* Controlado dinámicamente con JS */
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .fs-status-msg.status-success {
+            display: block;
+            background-color: rgba(16, 185, 129, 0.15);
+            border: 1px solid #10b981;
+            color: #34d399;
+        }
+
+        .fs-status-msg.status-error {
+            display: block;
+            background-color: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            color: #f87171;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .contact-form {
@@ -675,7 +710,6 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <!-- Banner Image -->
             <div class="hero-banner-wrapper">
                 <img src="banner.png" alt="Turning strategy into measurable impact" class="hero-banner-img">
             </div>
@@ -765,7 +799,6 @@
         </div>
         <div class="services-grid">
             
-            <!-- Service 1 -->
             <div class="service-card">
                 <div>
                     <div class="service-type lang-es">Liderazgo Bajo Demanda</div>
@@ -796,7 +829,6 @@
                 </div>
             </div>
 
-            <!-- Service 2 -->
             <div class="service-card" style="border-color: var(--accent);">
                 <div>
                     <div class="service-type lang-es">Sprint Acelerado (6-10 Semanas)</div>
@@ -827,7 +859,6 @@
                 </div>
             </div>
 
-            <!-- Service 3 -->
             <div class="service-card">
                 <div>
                     <div class="service-type lang-es">Escalado Intercultural</div>
@@ -873,7 +904,6 @@
             </div>
 
             <div class="about-grid">
-                <!-- Sidebar / Credentials Card with Profile Photo & LinkedIn Button -->
                 <div class="about-card">
                     <div class="main-photo-wrapper">
                         <img src="profile.jpg" alt="Daniel Antonio Castañeda Forero" class="main-photo">
@@ -889,7 +919,6 @@
                         Executive leader specialized in operational transformation, nearshore hub scaling, and integrating AI into corporate workflows.
                     </p>
 
-                    <!-- LinkedIn Link Button -->
                     <a href="https://www.linkedin.com/in/danielcastanedapmp/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
                         <svg style="width:16px; height:16px; fill:currentColor; vertical-align:middle; margin-right:6px;" viewBox="0 0 24 24">
                             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
@@ -907,7 +936,6 @@
                     </div>
                 </div>
 
-                <!-- Main Narrative Content -->
                 <div class="about-content">
                     <h3 class="lang-es">Más de dos décadas conectando la estrategia directiva con la ejecución impecable</h3>
                     <h3 class="lang-en">Over two decades bridging executive strategy with flawless execution</h3>
@@ -926,7 +954,6 @@
                         My approach as a Fractional Director combines the rigorous structure required by C-level executives with the agility and adaptation needed to sustain high-performing teams. I act as a seamless bridge between leadership in the US or Europe and delivery teams in LATAM, removing cultural barriers and ensuring full visibility through objective data (SPI/CPI).
                     </p>
 
-                    <!-- Core Pillars -->
                     <div class="pillars-grid">
                         <div class="pillar-item">
                             <h4 class="lang-es">Gobernanza Pragmática</h4>
@@ -952,7 +979,7 @@
         </section>
     </div>
 
-    <!-- Interactive Contact Form Section -->
+    <!-- Contact Form Section with Dynamic Formspree Response Handling -->
     <div class="contact-section" id="contacto">
         <div class="contact-container">
             <div class="contact-header">
@@ -963,11 +990,19 @@
                 <p class="lang-en">Fill out the form below to request a complimentary 30-minute strategic audit session.</p>
             </div>
 
-            <!-- Formspree Direct Form (Envia a ingdaniel.castaneda@gmail.com) -->
-            <form action="https://formspree.io/f/xnpqpnwv" method="POST" class="contact-form">
-                <!-- Honeypot para evitar spam -->
-                <input type="text" name="_gotcha" style="display:none">
+            <!-- Dynamic Notification Containers -->
+            <div id="status-success" class="fs-status-msg">
+                <span class="lang-es">¡Gracias! Su mensaje ha sido enviado correctamente. Me pondré en contacto con usted a la brevedad.</span>
+                <span class="lang-en">Thank you! Your message has been sent successfully. I will get in touch with you shortly.</span>
+            </div>
+            
+            <div id="status-error" class="fs-status-msg">
+                <span class="lang-es">Hubo un error al enviar el formulario. Por favor verifique sus datos e intente nuevamente.</span>
+                <span class="lang-en">There was an error submitting the form. Please check your inputs and try again.</span>
+            </div>
 
+            <!-- Formspree Form -->
+            <form id="contact-form" action="https://formspree.io/f/xnpqpnwv" method="POST" class="contact-form">
                 <div class="form-group">
                     <label class="form-label lang-es" for="name">Nombre Completo *</label>
                     <label class="form-label lang-en" for="name">Full Name *</label>
@@ -1008,8 +1043,8 @@
                     <textarea id="message" name="message" class="form-control" placeholder="Describa brevemente los cuellos de botella o metas de su equipo..." required></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary form-submit-btn lang-es">Enviar Solicitud de Diagnóstico</button>
-                <button type="submit" class="btn-primary form-submit-btn lang-en">Submit Audit Request</button>
+                <button type="submit" id="submit-btn-es" class="btn-primary form-submit-btn lang-es">Enviar Solicitud de Diagnóstico</button>
+                <button type="submit" id="submit-btn-en" class="btn-primary form-submit-btn lang-en">Submit Audit Request</button>
             </form>
         </div>
     </div>
@@ -1021,12 +1056,67 @@
         <p class="lang-en">Available for global remote engagements and on-site in LATAM.</p>
     </footer>
 
+    <!-- Script para cambiar el idioma -->
     <script>
         function switchLang(lang) {
             document.body.className = 'lang-' + lang;
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
         }
+    </script>
+
+    <!-- Dynamic AJAX Form Submission Script -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const successStatus = document.getElementById('status-success');
+        const errorStatus = document.getElementById('status-error');
+        const submitBtns = form.querySelectorAll('button[type="submit"]');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // 1. Ocultar notificaciones previas
+            successStatus.classList.remove('status-success');
+            errorStatus.classList.remove('status-error');
+
+            // 2. Deshabilitar botones durante el envío
+            submitBtns.forEach(btn => {
+                btn.disabled = true;
+                btn.dataset.originalText = btn.innerText;
+                btn.innerText = document.body.classList.contains('lang-es') ? 'Enviando...' : 'Sending...';
+            });
+
+            // 3. Enviar datos via Fetch API
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Mostrar banner de éxito y reiniciar formulario
+                    successStatus.classList.add('status-success');
+                    form.reset();
+                } else {
+                    // Mostrar banner de error en caso de fallo 4xx/5xx
+                    errorStatus.classList.add('status-error');
+                }
+            } catch (error) {
+                // Mostrar banner de error en caso de falla de red
+                errorStatus.classList.add('status-error');
+            } finally {
+                // Restaurar estado de los botones de envío
+                submitBtns.forEach(btn => {
+                    btn.disabled = false;
+                    btn.innerText = btn.dataset.originalText;
+                });
+            }
+        });
     </script>
 </body>
 </html>
