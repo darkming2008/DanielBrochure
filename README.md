@@ -41,12 +41,3 @@ El formulario de contacto está preconfigurado para enviar la información direc
 
 * **LinkedIn:** La sección "Acerca de Mí" incluye un botón directo al perfil profesional: `https://www.linkedin.com/in/danielcastanedapmp/`.
 * **Switch de Idioma:** El botón selector `ES | EN` en la barra de navegación permite alternar entre español e inglés de forma instantánea mediante la clase CSS activa en el cuerpo del documento (`body.lang-es` / `body.lang-en`).
-
----
-
-## 🚀 Despliegue (Hosting)
-
-Puedes publicar este proyecto de forma gratuita utilizando cualquiera de los siguientes servicios:
-
-* **GitHub Pages:** Sube los archivos a un repositorio de GitHub y activa GitHub Pages desde la pestaña *Settings > Pages*.
-* **Vercel / Netlify:** Arrastra la carpeta del proyecto a la consola de despliegue de Vercel o Netlify para publicar el sitio con certificado SSL automático.
