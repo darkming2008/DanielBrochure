@@ -28,11 +28,6 @@ Para que el proyecto cargue correctamente, asegúrate de colocar los siguientes 
 
 El formulario de contacto está preconfigurado para enviar la información directamente al correo: **`ingdaniel.castaneda@gmail.com`**.
 
-### Pasos para la primera activación (Formspree):
-1. **Primer envío de prueba:** Abre el sitio web en tu navegador, completa el formulario de contacto y haz clic en **"Enviar Solicitud de Diagnóstico"**.
-2. **Confirmación por correo:** Formspree enviará un correo automático a `ingdaniel.castaneda@gmail.com` solicitando confirmar la dirección por primera vez.
-3. **Activar cuenta/endpoint:** Haz clic en el botón de confirmación recibido en el correo. A partir de ese momento, cada mensaje enviado desde la web llegará automáticamente a tu bandeja de entrada.
-
 > **Nota sobre seguridad:** El formulario incluye un campo oculta antispam (*honeypot*) con el atributo `name="_gotcha"` para prevenir envíos automatizados por bots.
 
 ---
