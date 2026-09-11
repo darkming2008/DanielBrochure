@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -206,12 +207,6 @@
         .btn-primary:hover {
             background-color: #0369a1;
             transform: translateY(-2px);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
         }
 
         .btn-outline {
@@ -534,6 +529,213 @@
             line-height: 1.5;
         }
 
+        /* Timeline Styles for About Me Section */
+        .timeline-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .timeline-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-icon-badge {
+            position: absolute;
+            left: -3.25rem;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 4px var(--bg-light);
+        }
+
+        .timeline-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .timeline-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            background-color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            border: 1px solid #bae6fd;
+        }
+
+        .timeline-role {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-summary {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .timeline-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        .timeline-toggle-btn:hover {
+            color: #0369a1;
+        }
+
+        .timeline-toggle-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            border-top: 1px dashed var(--border);
+            margin-top: 0.75rem;
+            padding-top: 0;
+        }
+
+        .timeline-details ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-details li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .timeline-details li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: -0.1rem;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1rem;
+        }
+
+        .tag-chip {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
         /* Contact Section & Dynamic Form Styling */
         .contact-section {
             background: linear-gradient(135deg, var(--primary) 0%, #090d16 100%);
@@ -572,7 +774,7 @@
             margin-bottom: 1.5rem;
             padding: 1rem;
             border-radius: 8px;
-            display: none; /* Controlado dinámicamente con JS */
+            display: none;
             animation: fadeIn 0.3s ease-in-out;
         }
 
@@ -677,6 +879,9 @@
             .contact-form { grid-template-columns: 1fr; }
             .form-group.full-width, .form-submit-btn { grid-column: span 1; }
             nav { display: none; }
+            .timeline-container { padding-left: 1.5rem; }
+            .timeline-icon-badge { left: -2.25rem; width: 2rem; height: 2rem; }
+            .timeline-icon-badge svg { width: 14px; height: 14px; }
         }
     </style>
 </head>
@@ -892,7 +1097,7 @@
         </div>
     </section>
 
-    <!-- Section: About Me / Acerca de Mí -->
+    <!-- Section: About Me / Acerca de Mí + Interactive Timeline -->
     <div class="about-bg">
         <section class="section" id="acerca">
             <div class="section-header">
@@ -976,6 +1181,306 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SUBSECCIÓN: LÍNEA DE TIEMPO INTERACTIVA / EXPERIENCIA PROFESIONAL -->
+            <div class="timeline-section">
+                <h3 class="timeline-title lang-es">Trayectoria Profesional y Logros Clave</h3>
+                <h3 class="timeline-title lang-en">Career Journey & Strategic Impact</h3>
+
+                <p class="timeline-subtitle lang-es">Explore mis posiciones directivas, transformaciones ágiles y proyectos enterprise</p>
+                <p class="timeline-subtitle lang-en">Explore executive leadership, agile transformations, and enterprise projects</p>
+
+                <!-- Filtros Dinámicos -->
+                <div class="timeline-filters">
+                    <button class="filter-btn active" onclick="filterTimeline('all', event)">
+                        <span class="lang-es">Todas</span>
+                        <span class="lang-en">All Roles</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('agile', event)">
+                        <span class="lang-es">Transformación Ágil</span>
+                        <span class="lang-en">Agile Leadership</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('pmo', event)">
+                        <span class="lang-es">Liderazgo & PMO</span>
+                        <span class="lang-en">PMO & Delivery</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('consulting', event)">
+                        <span class="lang-es">Consultoría & Formación</span>
+                        <span class="lang-en">Consulting & Training</span>
+                    </button>
+                </div>
+
+                <!-- Contenedor de la Línea de Tiempo -->
+                <div class="timeline-container">
+
+                    <!-- ITEM 1: Grupo Loyal & IT Formation -->
+                    <div class="timeline-item" data-category="consulting">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Grupo Loyal & IT Formation (España)</span>
+                                <span class="timeline-date">2022 – Present</span>
+                            </div>
+                            <div class="timeline-role lang-es">International Enterprise Trainer & Project Governance Consultant</div>
+                            <div class="timeline-role lang-en">International Enterprise Trainer & Project Governance Consultant</div>
+
+                            <p class="timeline-summary lang-es">Socio de Habilitación Estratégica en arquitectura avanzada de gobernanza de proyectos, predictibilidad de portafolio y mitigación de riesgos tecnológicos en Europa y LATAM.</p>
+                            <p class="timeline-summary lang-en">Strategic Enablement Partner in advanced project governance architecture, portfolio predictability, and tech risk mitigation across Europe and LATAM.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-1', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-1">
+                                <ul class="lang-es">
+                                    <li>Diseño e instrucción ejecutiva in-company sobre marcos PMP® v7, PRINCE2®, Gobernanza de Datos (GDPR) e ingeniería Lean IT.</li>
+                                    <li>Más de 500 horas de instrucción impartidas a +700 ejecutivos de tecnología, directores de PMO y gerentes senior.</li>
+                                    <li>Desarrollo de capacidades en gobernanza híbrida y predictibilidad de portafolio para clientes corporativos.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Design and executive instruction on PMP® v7, PRINCE2®, Data Governance (GDPR), and Lean IT value streams.</li>
+                                    <li>Delivered over 500 instruction hours, training 700+ tech executives and PMO directors.</li>
+                                    <li>Built corporate capabilities in hybrid governance and portfolio predictability for enterprise clients.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">PMP® v7</span>
+                                <span class="tag-chip">PRINCE2®</span>
+                                <span class="tag-chip">GDPR</span>
+                                <span class="tag-chip">Gobernanza de Proyectos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2: Kinesso -->
+                    <div class="timeline-item" data-category="agile">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Kinesso</span>
+                                <span class="timeline-date">Nov 2021 – Jul 2026</span>
+                            </div>
+                            <div class="timeline-role lang-es">LATAM Agile Lead / Project Management Director</div>
+                            <div class="timeline-role lang-en">LATAM Agile Lead / Project Management Director</div>
+
+                            <p class="timeline-summary lang-es">Dirección de la transformación Agile en LATAM, escalando la entrega a un hub distribuido de +300 profesionales en 5 verticales estratégicas de AdTech y Big Data.</p>
+                            <p class="timeline-summary lang-en">Led LATAM Agile transformation, scaling delivery to a distributed hub of 300+ professionals across 5 strategic AdTech & Big Data verticals.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-2', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-2">
+                                <ul class="lang-es">
+                                    <li>Reducción del Time-to-Market en un 40% y aumento de la predictibilidad en un 60% con Lean Portfolio Management.</li>
+                                    <li>Aumento de 5x en la velocidad de entrega de los equipos y elevación de madurez ágil de 3.8 a 4.2/5.</li>
+                                    <li>Co-creación del centro de entrega en Colombia escalado a ~650 colaboradores globales con alcance operativo de USD 600K–1M/mes.</li>
+                                    <li>Logro de eNPS de equipo > 8 y despliegue de dashboards de gobernanza en tiempo real (Power BI, Tableau, eazyBI).</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Reduced Time-to-Market by 40% and increased delivery predictability by 60% using Lean Portfolio Management.</li>
+                                    <li>Boosted team velocity by 5x and elevated organizational agile maturity from 3.8 to 4.2/5.</li>
+                                    <li>Co-built Colombia software hub scaled to ~650 global collaborators with USD 600K–1M/month scope.</li>
+                                    <li>Achieved eNPS > 8 and deployed real-time governance reporting dashboards (Power BI, Tableau, eazyBI).</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Agile Leadership</span>
+                                <span class="tag-chip">Hub +300 Pros</span>
+                                <span class="tag-chip">Power BI / Tableau</span>
+                                <span class="tag-chip">Lean Portfolio</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3: Gorilla Logic -->
+                    <div class="timeline-item" data-category="agile">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Gorilla Logic</span>
+                                <span class="timeline-date">Feb 2021 – Nov 2021</span>
+                            </div>
+                            <div class="timeline-role lang-es">Scrum Master – Cloud AD Services & Facelift App</div>
+                            <div class="timeline-role lang-en">Scrum Master – Cloud AD Services & Facelift App</div>
+
+                            <p class="timeline-summary lang-es">Gestión y aceleración de equipos de desarrollo distribuidos en Colombia, Costa Rica y Estados Unidos para servicios Cloud AD y renovación de software.</p>
+                            <p class="timeline-summary lang-en">Managed and accelerated distributed engineering teams across Colombia, Costa Rica, and the US for Cloud AD services and web refactoring.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-3', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-3">
+                                <ul class="lang-es">
+                                    <li>Reducción del tiempo de ramp-up en un 15% para equipos multidisciplinarios.</li>
+                                    <li>Optimización del ritmo de entrega de features pasando de 9 semanas a menos de 4 semanas.</li>
+                                    <li>Ejecución simultánea como Product Owner delegado para el lanzamiento a tiempo de aplicación web.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Reduced team onboarding ramp-up time by 15%.</li>
+                                    <li>Accelerated feature delivery cadence from 9 weeks to under 4 weeks.</li>
+                                    <li>Served concurrently as delegated Product Owner for timely web application release.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Cloud AD</span>
+                                <span class="tag-chip">Nearshore Delivery</span>
+                                <span class="tag-chip">Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4: Globant -->
+                    <div class="timeline-item" data-category="pmo">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Globant</span>
+                                <span class="timeline-date">Sep 2018 – Ene 2021</span>
+                            </div>
+                            <div class="timeline-role lang-es">Project Manager Lead | Sr. Delivery Manager</div>
+                            <div class="timeline-role lang-en">Project Manager Lead | Sr. Delivery Manager</div>
+
+                            <p class="timeline-summary lang-es">Liderazgo de portafolio multi-cliente de alta escala (IHS Markit, EY, Carnival Cruise Lines) y estructuración comercial de cuentas clave.</p>
+                            <p class="timeline-summary lang-en">Led multi-client high-scale portfolio (IHS Markit, EY, Carnival Cruise Lines) and strategic sales structuring for key enterprise accounts.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-4', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-4">
+                                <ul class="lang-es">
+                                    <li>Estructuración y cierre contractual de fábrica de software para Ecopetrol por USD 8.3M.</li>
+                                    <li>Escalamiento del proyecto de control tributario EY de USD 350K a USD 2.7M (equipo incrementado de 7 a 18 profesionales).</li>
+                                    <li>Gestión de la plataforma eTrading e insights de datos de IHS Markit (USD 140K–210K/mes).</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Structured and closed USD 8.3M software factory deal with Ecopetrol.</li>
+                                    <li>Scaled EY tax control platform project from USD 350K to USD 2.7M (team expanded from 7 to 18 members).</li>
+                                    <li>Managed IHS Markit eTrading & data insights platform engagement (USD 140K–210K/month).</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">USD 8.3M Contract</span>
+                                <span class="tag-chip">Fintech / eTrading</span>
+                                <span class="tag-chip">Enterprise Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5: Accenture -->
+                    <div class="timeline-item" data-category="pmo">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Accenture</span>
+                                <span class="timeline-date">Nov 2013 – Nov 2017</span>
+                            </div>
+                            <div class="timeline-role lang-es">Project Manager | PMO Leader | Sales Enablement Manager</div>
+                            <div class="timeline-role lang-en">Project Manager | PMO Leader | Sales Enablement Manager</div>
+
+                            <p class="timeline-summary lang-es">Liderazgo de programas complejos de arquitectura IT, integración OTT VoD multi-proveedor y gestión de portafolio comercial en Telecomunicaciones y Energy.</p>
+                            <p class="timeline-summary lang-en">Led complex IT architecture programs, multi-vendor OTT VoD integration, and commercial sales portfolio management across Telecom & Energy.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-5', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-5">
+                                <ul class="lang-es">
+                                    <li>Dirección del programa de integración plataforma OTT VoD de USD 3.5M con 16 proveedores bajo SLAs formales.</li>
+                                    <li>Gestión de portafolio de ventas de USD 19.5M durante 3 años como Sales Enablement Manager.</li>
+                                    <li>Rediseño del modelo operativo de arquitectura de procesos TI alineado a marcos COBIT, ITIL y eTOM.</li>
+                                    <li>Dirección de PMO en proyecto de Supply Chain para importante compañía de Oil & Gas (USD 1.2M).</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Directed USD 3.5M OTT VoD platform integration program across 16 vendors under formal SLAs.</li>
+                                    <li>Managed USD 19.5M sales portfolio over 3 years as Sales Enablement Manager.</li>
+                                    <li>Redesigned IT operating model alignment with COBIT, ITIL, and eTOM standards.</li>
+                                    <li>PMO Lead for Oil & Gas Supply Chain project (USD 1.2M).</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">USD 19.5M Sales</span>
+                                <span class="tag-chip">COBIT / ITIL</span>
+                                <span class="tag-chip">OTT Platform</span>
+                                <span class="tag-chip">SLAs Multi-vendor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6: Bureau Veritas -->
+                    <div class="timeline-item" data-category="pmo">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Bureau Veritas</span>
+                                <span class="timeline-date">Feb 2011 – Nov 2013</span>
+                            </div>
+                            <div class="timeline-role lang-es">PMO Monitoring & Control Referent | Planning Lead (Programa Genoma - Ecopetrol)</div>
+                            <div class="timeline-role lang-en">PMO Monitoring & Control Referent | Planning Lead (Genoma Program - Ecopetrol)</div>
+
+                            <p class="timeline-summary lang-es">Control de gestión y planificación para programa de transformación corporativa de USD 50M en 16 frentes con +360 profesionales multi-empresa.</p>
+                            <p class="timeline-summary lang-en">Managed project control and planning for a USD 50M enterprise transformation program across 16 streams with 360+ multi-company professionals.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-6', event)">
+                                <span class="lang-es">Ver detalles y métricas</span>
+                                <span class="lang-en">View details and metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-6">
+                                <ul class="lang-es">
+                                    <li>Obtención de un SPI final de 1.03 y un CPI de 0.94 en un programa complejo de USD 50M.</li>
+                                    <li>Liderazgo de equipo de 360 profesionales pertenecientes a 4 firmas consultoras (Bureau Veritas, Accenture, Hays Group, CIO Group).</li>
+                                    <li>Desarrollo de herramientas automatizadas para el control presupuestal, KPIs y madurez de proyecto metodología FEL.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li>Achieved a final SPI of 1.03 and CPI of 0.94 across a complex USD 50M program scope.</li>
+                                    <li>Led cross-functional team of 360 professionals from 4 consulting firms (Bureau Veritas, Accenture, Hays, CIO Group).</li>
+                                    <li>Built automated tools for project control, EVM/SPI/CPI tracking, and FEL methodology alignment.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">USD 50M Program</span>
+                                <span class="tag-chip">EVM (SPI/CPI)</span>
+                                <span class="tag-chip">360 Pros</span>
+                                <span class="tag-chip">Ecopetrol</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </div>
 
@@ -1056,12 +1561,49 @@
         <p class="lang-en">Available for global remote engagements and on-site in LATAM.</p>
     </footer>
 
-    <!-- Script para cambiar el idioma -->
+    <!-- Scripts de Interacción -->
     <script>
+        // Cambiar Idioma
         function switchLang(lang) {
             document.body.className = 'lang-' + lang;
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+
+        // Filtro de la Línea de Tiempo
+        function filterTimeline(category, evt) {
+            const items = document.querySelectorAll('.timeline-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if(evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            }
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Expandir / Ocultar Detalles de Experiencia
+        function toggleDetails(id, evt) {
+            const detailEl = document.getElementById(id);
+            const btn = evt.currentTarget;
+            const svgIcon = btn.querySelector('svg');
+
+            if (detailEl.style.maxHeight && detailEl.style.maxHeight !== '0px') {
+                detailEl.style.maxHeight = '0px';
+                detailEl.style.paddingTop = '0px';
+                if(svgIcon) svgIcon.style.transform = 'rotate(0deg)';
+            } else {
+                detailEl.style.maxHeight = detailEl.scrollHeight + 100 + 'px';
+                detailEl.style.paddingTop = '1rem';
+                if(svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+            }
         }
     </script>
 
@@ -1120,3 +1662,5 @@
     </script>
 </body>
 </html>
+
+```
