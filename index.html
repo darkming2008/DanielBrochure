@@ -1210,6 +1210,38 @@
                     </button>
                 </div>
 
+                <!-- SUBSECCIÓN: LÍNEA DE TIEMPO COMPLETA SEGÚN EL CV MAESTRO -->
+            <div class="timeline-section">
+                <h3 class="timeline-title lang-es">Trayectoria Profesional y Logros Clave (CV Maestro)</h3>
+                <h3 class="timeline-title lang-en">Master Career Journey & Detailed Impact</h3>
+
+                <p class="timeline-subtitle lang-es">Historial completo de liderazgo, transformaciones ágiles, proyectos enterprise y consultoría</p>
+                <p class="timeline-subtitle lang-en">Full historical log of executive leadership, agile transformations, enterprise projects, and consulting</p>
+
+                <!-- Filtros Dinámicos -->
+                <div class="timeline-filters">
+                    <button class="filter-btn active" onclick="filterTimeline('all', event)">
+                        <span class="lang-es">Todas las Experiencias</span>
+                        <span class="lang-en">All Experiences</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('agile', event)">
+                        <span class="lang-es">Transformación Ágil</span>
+                        <span class="lang-en">Agile Transformation</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('pmo', event)">
+                        <span class="lang-es">Liderazgo de PMO & Delivery</span>
+                        <span class="lang-en">PMO & Delivery Leadership</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('consulting', event)">
+                        <span class="lang-es">Consultoría & Formación</span>
+                        <span class="lang-en">Consulting & Training</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('early', event)">
+                        <span class="lang-es">Carrera Temprana</span>
+                        <span class="lang-en">Early Career</span>
+                    </button>
+                </div>
+
                 <!-- Contenedor de la Línea de Tiempo -->
                 <div class="timeline-container">
 
@@ -1221,84 +1253,133 @@
                         <div class="timeline-card">
                             <div class="timeline-header">
                                 <span class="timeline-company">Grupo Loyal & IT Formation (España)</span>
-                                <span class="timeline-date">2022 – Present</span>
+                                <span class="timeline-date">2022 – Actual</span>
                             </div>
-                            <div class="timeline-role lang-es">International Enterprise Trainer & Project Governance Consultant</div>
-                            <div class="timeline-role lang-en">International Enterprise Trainer & Project Governance Consultant</div>
+                            <div class="timeline-role lang-es">International Enterprise Trainer & Project Governance Consultant (Socio Estratégico)</div>
+                            <div class="timeline-role lang-en">International Enterprise Trainer & Project Governance Consultant (Strategic Partner)</div>
 
-                            <p class="timeline-summary lang-es">Socio de Habilitación Estratégica en arquitectura avanzada de gobernanza de proyectos, predictibilidad de portafolio y mitigación de riesgos tecnológicos en Europa y LATAM.</p>
-                            <p class="timeline-summary lang-en">Strategic Enablement Partner in advanced project governance architecture, portfolio predictability, and tech risk mitigation across Europe and LATAM.</p>
+                            <p class="timeline-summary lang-es">Diseño y desarrollo de programas ejecutivos in-company de alta complejidad para los mercados de Europa y LATAM, enfocados en arquitectura de gobernanza, predictibilidad de portafolio y mitigación de riesgo tecnológico.</p>
+                            <p class="timeline-summary lang-en">Design and delivery of high-complexity executive in-company programs across Europe and LATAM, focusing on governance architecture, portfolio predictability, and tech risk mitigation.</p>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-1', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-loyal', event)">
+                                <span class="lang-es">Ver detalles completos</span>
+                                <span class="lang-en">View complete details</span>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </button>
 
-                            <div class="timeline-details" id="det-1">
+                            <div class="timeline-details" id="det-loyal">
                                 <ul class="lang-es">
-                                    <li>Diseño e instrucción ejecutiva in-company sobre marcos PMP® v7, PRINCE2®, Gobernanza de Datos (GDPR) e ingeniería Lean IT.</li>
-                                    <li>Más de 500 horas de instrucción impartidas a +700 ejecutivos de tecnología, directores de PMO y gerentes senior.</li>
-                                    <li>Desarrollo de capacidades en gobernanza híbrida y predictibilidad de portafolio para clientes corporativos.</li>
+                                    <li>Entrega instructiva de marcos tradicionales, ágiles e híbridos complejos: PMP® v7, PRINCE2®, Gobernanza de Datos (alineación GDPR), Gestión del Cambio Ágil e ingeniería de flujo de valor Lean IT.</li>
+                                    <li>Más de 500 horas de instrucción impartidas a +700 ejecutivos de tecnología, directores de PMO y gerentes senior de proyectos.</li>
+                                    <li>Infraestructura conjunta de aprendizaje corporativo para fortalecimiento institucional en Europa y América Latina.</li>
                                 </ul>
                                 <ul class="lang-en">
-                                    <li>Design and executive instruction on PMP® v7, PRINCE2®, Data Governance (GDPR), and Lean IT value streams.</li>
-                                    <li>Delivered over 500 instruction hours, training 700+ tech executives and PMO directors.</li>
-                                    <li>Built corporate capabilities in hybrid governance and portfolio predictability for enterprise clients.</li>
+                                    <li>Instructional delivery of traditional, agile, and hybrid frameworks: PMP® v7, PRINCE2®, Data Governance (GDPR alignment), Agile Change Management, and Lean IT value streams.</li>
+                                    <li>Over 500 hours of executive training delivered to 700+ technology leaders, PMO directors, and senior project managers.</li>
+                                    <li>Joint corporate learning infrastructure for strategic enablement across Europe and Latin America.</li>
                                 </ul>
                             </div>
 
                             <div class="timeline-tags">
                                 <span class="tag-chip">PMP® v7</span>
                                 <span class="tag-chip">PRINCE2®</span>
-                                <span class="tag-chip">GDPR</span>
-                                <span class="tag-chip">Gobernanza de Proyectos</span>
+                                <span class="tag-chip">Gobernanza GDPR</span>
+                                <span class="tag-chip">Europa & LATAM</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ITEM 2: Kinesso -->
-                    <div class="timeline-item" data-category="agile">
+                    <!-- ITEM 2: Kinesso (Con 3 Sub-Roles y Verticales identificadas con Delivery Operations) -->
+                    <div class="timeline-item" data-category="agile pmo">
                         <div class="timeline-icon-badge">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                         </div>
                         <div class="timeline-card">
                             <div class="timeline-header">
-                                <span class="timeline-company">Kinesso</span>
+                                <span class="timeline-company">Kinesso (Plataforma Global AdTech / MarTech)</span>
                                 <span class="timeline-date">Nov 2021 – Jul 2026</span>
                             </div>
-                            <div class="timeline-role lang-es">LATAM Agile Lead / Project Management Director</div>
-                            <div class="timeline-role lang-en">LATAM Agile Lead / Project Management Director</div>
 
-                            <p class="timeline-summary lang-es">Dirección de la transformación Agile en LATAM, escalando la entrega a un hub distribuido de +300 profesionales en 5 verticales estratégicas de AdTech y Big Data.</p>
-                            <p class="timeline-summary lang-en">Led LATAM Agile transformation, scaling delivery to a distributed hub of 300+ professionals across 5 strategic AdTech & Big Data verticals.</p>
+                            <!-- Sub-rol 1 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">LATAM Agile Lead</div>
+                                <div class="sub-role-title lang-en">LATAM Agile Lead</div>
+                                <span class="sub-role-period">Jun. 2024 – Jul. 2026</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Dirigí la transformación Agile en LATAM, escalando la entrega a un hub de producción distribuido de <strong>+300 profesionales</strong> colaborando directamente en 5 verticales de negocio:
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Led the LATAM Agile transformation, scaling delivery to a distributed hub of <strong>300+ professionals</strong> across 5 business verticals:
+                                </p>
+                                <ul class="feature-list lang-es" style="margin-bottom:0.5rem; margin-top:0.4rem; font-size:0.85rem;">
+                                    <li>1. Segmentación de Mercados y Audiencias</li>
+                                    <li>2. <strong>ETL & Delivery Operations (multi-mercado)</strong></li>
+                                    <li>3. Visual Marketing y Contenido Creativo</li>
+                                    <li>4. Productos de Segmentación y Activación de Mercados</li>
+                                    <li>5. Data Science y Analítica</li>
+                                </ul>
+                                <ul class="feature-list lang-en" style="margin-bottom:0.5rem; margin-top:0.4rem; font-size:0.85rem;">
+                                    <li>1. Market Segmentation & Audiences</li>
+                                    <li>2. <strong>ETL & Delivery Operations (multi-market)</strong></li>
+                                    <li>3. Visual Marketing & Creative Content</li>
+                                    <li>4. Market Activation & Segmentation Products</li>
+                                    <li>5. Data Science & Analytics</li>
+                                </ul>
+                            </div>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-2', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
+                            <!-- Sub-rol 2 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Management Director – Colombia</div>
+                                <div class="sub-role-title lang-en">Project Management Director – Colombia</div>
+                                <span class="sub-role-period">Ene. 2022 – Jul. 2026</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Co-lideré la creación del clúster de fábrica de software Colombia/LATAM, escalando el nuevo centro de entrega a <strong>~650 colaboradores a nivel global</strong> con alcance operativo de USD 600K–1M/mes bajo SLAs formales.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Co-built the software factory cluster in Colombia/LATAM, scaling the new delivery center to <strong>~650 global collaborators</strong> with USD 600K–1M/month scope under formal SLAs.
+                                </p>
+                            </div>
+
+                            <!-- Sub-rol 3 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Sr. Scrum Master / Delivery Manager – Programa Big Data</div>
+                                <div class="sub-role-title lang-en">Sr. Scrum Master / Delivery Manager – Big Data Program</div>
+                                <span class="sub-role-period">Nov. 2021 – Jun. 2024</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Diseñé e implementé un modelo de Scrum escalado a la medida para acelerar equipos de Big Data de 8 a 15 personas.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Designed and implemented a tailored scaled Scrum framework to accelerate Big Data teams from 8 to 15 members.
+                                </p>
+                            </div>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-kinesso', event)">
+                                <span class="lang-es">Ver métricas de impacto Kinesso</span>
+                                <span class="lang-en">View Kinesso impact metrics</span>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </button>
 
-                            <div class="timeline-details" id="det-2">
+                            <div class="timeline-details" id="det-kinesso">
                                 <ul class="lang-es">
-                                    <li>Reducción del Time-to-Market en un 40% y aumento de la predictibilidad en un 60% con Lean Portfolio Management.</li>
-                                    <li>Aumento de 5x en la velocidad de entrega de los equipos y elevación de madurez ágil de 3.8 a 4.2/5.</li>
-                                    <li>Co-creación del centro de entrega en Colombia escalado a ~650 colaboradores globales con alcance operativo de USD 600K–1M/mes.</li>
-                                    <li>Logro de eNPS de equipo > 8 y despliegue de dashboards de gobernanza en tiempo real (Power BI, Tableau, eazyBI).</li>
+                                    <li>Reducción del Time-to-Market en un 40% e incremento en predictibilidad de entrega en un 60% mediante Lean Portfolio Management.</li>
+                                    <li>Aumento de 5x en la velocidad de entrega de los equipos, elevando la madurez Agile organizacional de 3.8 a 4.2 (escala de 5).</li>
+                                    <li>eNPS de equipo superior a 8 mientras se consolidaba un hub autónomo y autosostenible.</li>
+                                    <li>Consolidación de dashboards de gobernanza en tiempo real (Power BI, Tableau, eazyBI) sobre salud de proyectos, riesgos y KPIs de entrega.</li>
                                 </ul>
                                 <ul class="lang-en">
-                                    <li>Reduced Time-to-Market by 40% and increased delivery predictability by 60% using Lean Portfolio Management.</li>
-                                    <li>Boosted team velocity by 5x and elevated organizational agile maturity from 3.8 to 4.2/5.</li>
-                                    <li>Co-built Colombia software hub scaled to ~650 global collaborators with USD 600K–1M/month scope.</li>
-                                    <li>Achieved eNPS > 8 and deployed real-time governance reporting dashboards (Power BI, Tableau, eazyBI).</li>
+                                    <li>Reduced Time-to-Market by 40% and increased delivery predictability by 60% with Lean Portfolio Management.</li>
+                                    <li>Boosted team velocity by 5x, elevating organizational agile maturity from 3.8 to 4.2 out of 5.</li>
+                                    <li>Maintained team eNPS > 8 while building a mature, self-sustaining delivery hub.</li>
+                                    <li>Consolidated real-time governance reporting dashboards (Power BI, Tableau, eazyBI) covering health, risk, and maturity metrics.</li>
                                 </ul>
                             </div>
 
                             <div class="timeline-tags">
-                                <span class="tag-chip">Agile Leadership</span>
+                                <span class="tag-chip">Delivery Operations</span>
                                 <span class="tag-chip">Hub +300 Pros</span>
-                                <span class="tag-chip">Power BI / Tableau</span>
-                                <span class="tag-chip">Lean Portfolio</span>
+                                <span class="tag-chip">650 Colaboradores</span>
+                                <span class="tag-chip">Power BI & Tableau</span>
+                                <span class="tag-chip">Big Data</span>
                             </div>
                         </div>
                     </div>
@@ -1313,41 +1394,42 @@
                                 <span class="timeline-company">Gorilla Logic</span>
                                 <span class="timeline-date">Feb 2021 – Nov 2021</span>
                             </div>
-                            <div class="timeline-role lang-es">Scrum Master – Cloud AD Services & Facelift App</div>
-                            <div class="timeline-role lang-en">Scrum Master – Cloud AD Services & Facelift App</div>
 
-                            <p class="timeline-summary lang-es">Gestión y aceleración de equipos de desarrollo distribuidos en Colombia, Costa Rica y Estados Unidos para servicios Cloud AD y renovación de software.</p>
-                            <p class="timeline-summary lang-en">Managed and accelerated distributed engineering teams across Colombia, Costa Rica, and the US for Cloud AD services and web refactoring.</p>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Scrum Master – Cloud AD Services</div>
+                                <div class="sub-role-title lang-en">Scrum Master – Cloud AD Services</div>
+                                <span class="sub-role-period">Mar. 2021 – Nov. 2021</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Reduje el tiempo de ramp-up en 15% y mejoré la cadencia de entrega de features de 9 semanas a menos de 4 semanas para un equipo de 12 personas distribuido en Colombia, Costa Rica y USA.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Reduced onboarding time by 15% and accelerated feature delivery cadence from 9 weeks to under 4 weeks for a 12-person distributed team across Colombia, Costa Rica, and the US.
+                                </p>
+                            </div>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-3', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                            </button>
-
-                            <div class="timeline-details" id="det-3">
-                                <ul class="lang-es">
-                                    <li>Reducción del tiempo de ramp-up en un 15% para equipos multidisciplinarios.</li>
-                                    <li>Optimización del ritmo de entrega de features pasando de 9 semanas a menos de 4 semanas.</li>
-                                    <li>Ejecución simultánea como Product Owner delegado para el lanzamiento a tiempo de aplicación web.</li>
-                                </ul>
-                                <ul class="lang-en">
-                                    <li>Reduced team onboarding ramp-up time by 15%.</li>
-                                    <li>Accelerated feature delivery cadence from 9 weeks to under 4 weeks.</li>
-                                    <li>Served concurrently as delegated Product Owner for timely web application release.</li>
-                                </ul>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Scrum Master – Proyecto Facelift para Aplicación Web</div>
+                                <div class="sub-role-title lang-en">Scrum Master – Web Application Facelift Project</div>
+                                <span class="sub-role-period">Feb. 2021 – Mar. 2021</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Entregué a tiempo un proyecto de ciclo corto guiando cérémonias, selección de marco y ejerciendo simultáneamente como Product Owner delegado.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Delivered a short-cycle web application facelift project on time while acting concurrently as delegated Product Owner.
+                                </p>
                             </div>
 
                             <div class="timeline-tags">
                                 <span class="tag-chip">Cloud AD</span>
                                 <span class="tag-chip">Nearshore Delivery</span>
-                                <span class="tag-chip">Scrum</span>
+                                <span class="tag-chip">Scrum Master</span>
+                                <span class="tag-chip">Product Owner Delegado</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- ITEM 4: Globant -->
-                    <div class="timeline-item" data-category="pmo">
+                    <div class="timeline-item" data-category="pmo agile">
                         <div class="timeline-icon-badge">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
                         </div>
@@ -1356,41 +1438,98 @@
                                 <span class="timeline-company">Globant</span>
                                 <span class="timeline-date">Sep 2018 – Ene 2021</span>
                             </div>
-                            <div class="timeline-role lang-es">Project Manager Lead | Sr. Delivery Manager</div>
-                            <div class="timeline-role lang-en">Project Manager Lead | Sr. Delivery Manager</div>
 
-                            <p class="timeline-summary lang-es">Liderazgo de portafolio multi-cliente de alta escala (IHS Markit, EY, Carnival Cruise Lines) y estructuración comercial de cuentas clave.</p>
-                            <p class="timeline-summary lang-en">Led multi-client high-scale portfolio (IHS Markit, EY, Carnival Cruise Lines) and strategic sales structuring for key enterprise accounts.</p>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Manager Lead | Sr. Delivery Manager – Portafolio Multi-Cliente</div>
+                                <div class="sub-role-title lang-en">Project Manager Lead | Sr. Delivery Manager – Multi-Client Portfolio</div>
+                                <span class="sub-role-period">Sep. 2020 – Ene. 2021</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Gestioné portafolio multi-cliente: IHS Markit (eTrading, USD 140K a USD 210K/mes), EY (programa de 23 proyectos), Carnival Cruise Lines (USD 230K/mes). Estructuré y cerré venta de fábrica de software a Ecopetrol por <strong>USD 8.3M</strong>.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Managed multi-client accounts: IHS Markit (USD 140K-210K/mo), EY (23-project program), Carnival Cruise Lines (USD 230K/mo). Closed USD 8.3M software factory deal with Ecopetrol.
+                                </p>
+                            </div>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-4', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                            </button>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Manager | Product Manager – Refactorización Control Tributario (EY)</div>
+                                <div class="sub-role-title lang-en">Project Manager | Product Manager – Tax Control Refactoring (EY)</div>
+                                <span class="sub-role-period">Jun. 2019 – Ago. 2020</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Escalé iniciativa de re-plataforma de 7 a 18 personas y tripliqué el presupuesto de USD 350K a <strong>USD 2.7M</strong> con alta visibilidad C-Level.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Scaled re-platforming initiative from 7 to 18 members and expanded budget from USD 350K to <strong>USD 2.7M</strong> with high C-Level visibility.
+                                </p>
+                            </div>
 
-                            <div class="timeline-details" id="det-4">
-                                <ul class="lang-es">
-                                    <li>Estructuración y cierre contractual de fábrica de software para Ecopetrol por USD 8.3M.</li>
-                                    <li>Escalamiento del proyecto de control tributario EY de USD 350K a USD 2.7M (equipo incrementado de 7 a 18 profesionales).</li>
-                                    <li>Gestión de la plataforma eTrading e insights de datos de IHS Markit (USD 140K–210K/mes).</li>
-                                </ul>
-                                <ul class="lang-en">
-                                    <li>Structured and closed USD 8.3M software factory deal with Ecopetrol.</li>
-                                    <li>Scaled EY tax control platform project from USD 350K to USD 2.7M (team expanded from 7 to 18 members).</li>
-                                    <li>Managed IHS Markit eTrading & data insights platform engagement (USD 140K–210K/month).</li>
-                                </ul>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Manager | Scrum Master – Plataforma eTrading (IHS Markit)</div>
+                                <div class="sub-role-title lang-en">Project Manager | Scrum Master – eTrading Platform (IHS Markit)</div>
+                                <span class="sub-role-period">Sep. 2018 – May. 2019</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Dirigí equipo de 9 personas para mantenimiento y evolutivos de plataforma de eTrading e insights financieros (USD 140K–210K/mes).
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Led 9-person team delivering platform maintenance and feature increments for eTrading platform (USD 140K–210K/mo).
+                                </p>
                             </div>
 
                             <div class="timeline-tags">
                                 <span class="tag-chip">USD 8.3M Contract</span>
-                                <span class="tag-chip">Fintech / eTrading</span>
-                                <span class="tag-chip">Enterprise Delivery</span>
+                                <span class="tag-chip">EY (USD 2.7M)</span>
+                                <span class="tag-chip">IHS Markit</span>
+                                <span class="tag-chip">Carnival Cruise</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ITEM 5: Accenture -->
-                    <div class="timeline-item" data-category="pmo">
+                    <!-- ITEM 5: Freelance -->
+                    <div class="timeline-item" data-category="consulting agile">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Consultoría Freelance</span>
+                                <span class="timeline-date">Feb 2018 – Sep 2018</span>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Consultor de Infraestructura – Plossi</div>
+                                <div class="sub-role-title lang-en">Infrastructure Consultant – Plossi</div>
+                                <span class="sub-role-period">Ago. 2018 – Sep. 2018</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Estudio de infraestructura y redes en 5 ciudades e impactando 14 áreas operativas para empresa constructora.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Infrastructure and networks study across 5 cities impacting 14 operational areas for a major construction enterprise.
+                                </p>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Consultor Agile – Corficolombiana</div>
+                                <div class="sub-role-title lang-en">Agile Consultant – Corficolombiana</div>
+                                <span class="sub-role-period">Feb. 2018 – Abr. 2018</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Coaching Agile y adopción de metodología para 28 profesionales en 3 áreas, habilitando migración de datos exitosa en sector financiero.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Agile coaching and methodology adoption for 28 professionals across 3 divisions, enabling critical financial data migration.
+                                </p>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Corficolombiana</span>
+                                <span class="tag-chip">Plossi</span>
+                                <span class="tag-chip">Agile Coaching</span>
+                                <span class="tag-chip">Infraestructura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6: Accenture -->
+                    <div class="timeline-item" data-category="pmo consulting">
                         <div class="timeline-icon-badge">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                         </div>
@@ -1399,43 +1538,64 @@
                                 <span class="timeline-company">Accenture</span>
                                 <span class="timeline-date">Nov 2013 – Nov 2017</span>
                             </div>
-                            <div class="timeline-role lang-es">Project Manager | PMO Leader | Sales Enablement Manager</div>
-                            <div class="timeline-role lang-en">Project Manager | PMO Leader | Sales Enablement Manager</div>
 
-                            <p class="timeline-summary lang-es">Liderazgo de programas complejos de arquitectura IT, integración OTT VoD multi-proveedor y gestión de portafolio comercial en Telecomunicaciones y Energy.</p>
-                            <p class="timeline-summary lang-en">Led complex IT architecture programs, multi-vendor OTT VoD integration, and commercial sales portfolio management across Telecom & Energy.</p>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Sales Enablement Manager (Organización CMT)</div>
+                                <div class="sub-role-title lang-en">Sales Enablement Manager (CMT Organization)</div>
+                                <span class="sub-role-period">Ene. 2015 – Nov. 2017</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Gestioné un portafolio de ventas de <strong>USD 19.5M</strong> durante 3 años (identificación de oportunidades, pricing, cierres contractuales).
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Managed a <strong>USD 19.5M</strong> sales portfolio over 3 years (opportunity scoping, proposal alignment, contract closures).
+                                </p>
+                            </div>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-5', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">PMO Leader | Integration Leader – Nueva Plataforma OTT VoD (Proyecto AVS)</div>
+                                <div class="sub-role-title lang-en">PMO Leader | Integration Leader – New OTT VoD Platform (AVS Project)</div>
+                                <span class="sub-role-period">Ene. 2015 – Sep. 2016</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Programa de integración end-to-end de plataforma OTT VoD por <strong>USD 3.5M</strong> gestionando 16 relaciones con proveedores bajo SLAs formales.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    End-to-end OTT VoD integration program worth <strong>USD 3.5M</strong> managing 16 vendor relationships under formal SLAs.
+                                </p>
+                            </div>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-accenture', event)">
+                                <span class="lang-es">Ver más proyectos de Accenture</span>
+                                <span class="lang-en">View more Accenture projects</span>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </button>
 
-                            <div class="timeline-details" id="det-5">
+                            <div class="timeline-details" id="det-accenture">
                                 <ul class="lang-es">
-                                    <li>Dirección del programa de integración plataforma OTT VoD de USD 3.5M con 16 proveedores bajo SLAs formales.</li>
-                                    <li>Gestión de portafolio de ventas de USD 19.5M durante 3 años como Sales Enablement Manager.</li>
-                                    <li>Rediseño del modelo operativo de arquitectura de procesos TI alineado a marcos COBIT, ITIL y eTOM.</li>
-                                    <li>Dirección de PMO en proyecto de Supply Chain para importante compañía de Oil & Gas (USD 1.2M).</li>
+                                    <li><strong>Project Manager – Consultoría TI Telecomunicaciones (Jun-Oct 2017):</strong> Engagement de consultoría por USD 350K alineado con COBIT, ITIL y eTOM.</li>
+                                    <li><strong>New IT Process Architect Lead (Nov 2016 - Mar 2017):</strong> Rediseño completo del modelo operativo TI para importante telco regional.</li>
+                                    <li><strong>Líder de Gestión del Cambio – CoE Change Management (Sep-Dic 2014):</strong> Diseño e implementación de Centro de Excelencia en Gestión del Cambio por USD 190K.</li>
+                                    <li><strong>Project Manager – Handover Sistema Colaborativo IBM RTC (Jun-Ago 2014):</strong> Recuperación de proyecto de USD 90K para go-live de IBM Rational Team Concert.</li>
+                                    <li><strong>PMO Leader – Supply Chain Oil & Gas (Nov 2013 - May 2014):</strong> Monitoreo y control de proyecto de USD 1.2M.</li>
                                 </ul>
                                 <ul class="lang-en">
-                                    <li>Directed USD 3.5M OTT VoD platform integration program across 16 vendors under formal SLAs.</li>
-                                    <li>Managed USD 19.5M sales portfolio over 3 years as Sales Enablement Manager.</li>
-                                    <li>Redesigned IT operating model alignment with COBIT, ITIL, and eTOM standards.</li>
-                                    <li>PMO Lead for Oil & Gas Supply Chain project (USD 1.2M).</li>
+                                    <li><strong>Project Manager – Telecom IT Consulting (Jun-Oct 2017):</strong> USD 350K engagement aligned with COBIT, ITIL, and eTOM standards.</li>
+                                    <li><strong>New IT Process Architect Lead (Nov 2016 - Mar 2017):</strong> Redesigned full IT operating model for major telecom provider.</li>
+                                    <li><strong>Change Management CoE Lead (Sep-Dec 2014):</strong> Designed and implemented USD 190K Change Management Center of Excellence.</li>
+                                    <li><strong>Project Manager – IBM RTC Collaborative System (Jun-Aug 2014):</strong> Recovery project worth USD 90K for IBM Rational Team Concert go-live.</li>
+                                    <li><strong>PMO Leader – Oil & Gas Supply Chain (Nov 2013 - May 2014):</strong> Monitored and controlled USD 1.2M supply chain initiative.</li>
                                 </ul>
                             </div>
 
                             <div class="timeline-tags">
-                                <span class="tag-chip">USD 19.5M Sales</span>
-                                <span class="tag-chip">COBIT / ITIL</span>
-                                <span class="tag-chip">OTT Platform</span>
-                                <span class="tag-chip">SLAs Multi-vendor</span>
+                                <span class="tag-chip">Ventas USD 19.5M</span>
+                                <span class="tag-chip">OTT VoD (USD 3.5M)</span>
+                                <span class="tag-chip">COBIT / ITIL / eTOM</span>
+                                <span class="tag-chip">Oil & Gas</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- ITEM 6: Bureau Veritas -->
+                    <!-- ITEM 7: Bureau Veritas -->
                     <div class="timeline-item" data-category="pmo">
                         <div class="timeline-icon-badge">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -1445,36 +1605,82 @@
                                 <span class="timeline-company">Bureau Veritas</span>
                                 <span class="timeline-date">Feb 2011 – Nov 2013</span>
                             </div>
-                            <div class="timeline-role lang-es">PMO Monitoring & Control Referent | Planning Lead (Programa Genoma - Ecopetrol)</div>
-                            <div class="timeline-role lang-en">PMO Monitoring & Control Referent | Planning Lead (Genoma Program - Ecopetrol)</div>
+                            <div class="timeline-role lang-es">PMO Monitoring & Control Referent | Planning Lead – Programa Genoma (Ecopetrol)</div>
+                            <div class="timeline-role lang-en">PMO Monitoring & Control Referent | Planning Lead – Genoma Program (Ecopetrol)</div>
 
-                            <p class="timeline-summary lang-es">Control de gestión y planificación para programa de transformación corporativa de USD 50M en 16 frentes con +360 profesionales multi-empresa.</p>
-                            <p class="timeline-summary lang-en">Managed project control and planning for a USD 50M enterprise transformation program across 16 streams with 360+ multi-company professionals.</p>
+                            <p class="timeline-summary lang-es">Control de gestión y planificación para programa de transformación integral de <strong>USD 50M</strong> en 16 frentes de trabajo, liderando un equipo de <strong>360 profesionales</strong> pertenecientes a 4 compañías (Bureau Veritas, Accenture, Hays Group y CIO Group).</p>
+                            <p class="timeline-summary lang-en">Project control and planning for a <strong>USD 50M</strong> enterprise transformation program across 16 streams, leading a <strong>360-professional team</strong> from 4 firms (Bureau Veritas, Accenture, Hays Group, and CIO Group).</p>
 
-                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-6', event)">
-                                <span class="lang-es">Ver detalles y métricas</span>
-                                <span class="lang-en">View details and metrics</span>
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-bv', event)">
+                                <span class="lang-es">Ver métricas y entregables de Ecopetrol</span>
+                                <span class="lang-en">View Ecopetrol metrics & deliverables</span>
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </button>
 
-                            <div class="timeline-details" id="det-6">
+                            <div class="timeline-details" id="det-bv">
                                 <ul class="lang-es">
-                                    <li>Obtención de un SPI final de 1.03 y un CPI de 0.94 en un programa complejo de USD 50M.</li>
-                                    <li>Liderazgo de equipo de 360 profesionales pertenecientes a 4 firmas consultoras (Bureau Veritas, Accenture, Hays Group, CIO Group).</li>
-                                    <li>Desarrollo de herramientas automatizadas para el control presupuestal, KPIs y madurez de proyecto metodología FEL.</li>
+                                    <li>Entrega con un <strong>SPI final de 1.03</strong> y un <strong>CPI de 0.94</strong> mediante reportes rigurosos y control de madurez FEL.</li>
+                                    <li>Desarrollo de herramientas automatizadas para control de gestión, alcance, KPIs y balance presupuestal cross-programa.</li>
+                                    <li>Promocionado a PMO Program Planning Lead como responsable funcional frente a la Oficina de Proyectos de Ecopetrol.</li>
                                 </ul>
                                 <ul class="lang-en">
-                                    <li>Achieved a final SPI of 1.03 and CPI of 0.94 across a complex USD 50M program scope.</li>
-                                    <li>Led cross-functional team of 360 professionals from 4 consulting firms (Bureau Veritas, Accenture, Hays, CIO Group).</li>
-                                    <li>Built automated tools for project control, EVM/SPI/CPI tracking, and FEL methodology alignment.</li>
+                                    <li>Delivered with a final <strong>SPI of 1.03</strong> and <strong>CPI of 0.94</strong> through EVM reporting and FEL methodology alignment.</li>
+                                    <li>Built automated tools for project control, scope tracking, KPI management, and cross-program cost balancing.</li>
+                                    <li>Promoted to PMO Program Planning Lead facing Ecopetrol's enterprise PMO.</li>
                                 </ul>
                             </div>
 
                             <div class="timeline-tags">
                                 <span class="tag-chip">USD 50M Program</span>
-                                <span class="tag-chip">EVM (SPI/CPI)</span>
-                                <span class="tag-chip">360 Pros</span>
+                                <span class="tag-chip">SPI 1.03 / CPI 0.94</span>
+                                <span class="tag-chip">360 Profesionales</span>
                                 <span class="tag-chip">Ecopetrol</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 8: Carrera Temprana (Agrupada) -->
+                    <div class="timeline-item" data-category="early pmo">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Carrera Temprana en Ingeniería de Proyectos</span>
+                                <span class="timeline-date">2003 – 2011</span>
+                            </div>
+                            <div class="timeline-role lang-es">Fundamentos de Gestión de Operaciones, PMO y Calidad</div>
+                            <div class="timeline-role lang-en">Operations Management, PMO & Quality Foundations</div>
+
+                            <p class="timeline-summary lang-es">Más de 7 años de crecimiento acelerado en roles de ingeniería operativa, control de calidad y soporte a PMOs corporativas.</p>
+                            <p class="timeline-summary lang-en">Over 7 years of rapid advancement across operational engineering, QA, and corporate PMO support.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-early', event)">
+                                <span class="lang-es">Ver los 4 roles tempranos detallados</span>
+                                <span class="lang-en">View 4 detailed early roles</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-early">
+                                <ul class="lang-es">
+                                    <li><strong>Keralty Group – Clínica Colsanitas (Jun 2010 - Feb 2011) | PM Engineer:</strong> Avance de madurez para portafolio de inversión e innovación de USD 2.8M.</li>
+                                    <li><strong>Gomez Project and Training Ltda (Ago 2008 - Jun 2010) | PM Junior Consultant:</strong> Soporte a clientes clave (Ecopetrol, Cerrejón, Comfandi, Publicar, Assenda) y programas de formación PMP®/CAPM®.</li>
+                                    <li><strong>Inversiones ColdStar (Ago 2007 - Jul 2008) | Operations Planning Engineer Lead:</strong> Planificación operativa para equipo de +300 personas de planta (cadena de suministro USD 1.6M). Promocionado a Jefe de Planificación.</li>
+                                    <li><strong>Unión Temporal Integra (UTI) – Proyecto Sensor Ecopetrol (Dic 2003 - Abr 2006) | PMO & QA Practitioner:</strong> Desarrollo de herramientas de tracking en VB.Net/SQL y e-learning para Gestión del Cambio. Promocionado a Data Quality Auditor.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>Keralty Group – Colsanitas (Jun 2010 - Feb 2011) | PM Engineer:</strong> Advanced PM maturity for a USD 2.8M innovation portfolio.</li>
+                                    <li><strong>Gomez Project and Training (Aug 2008 - Jun 2010) | PM Junior Consultant:</strong> Supported key clients (Ecopetrol, Cerrejón, Comfandi) and PMP®/CAPM® training programs.</li>
+                                    <li><strong>Inversiones ColdStar (Aug 2007 - Jul 2008) | Operations Planning Lead:</strong> Operations planning for 300+ plant staff (USD 1.6M supply chain). Promoted to Head of Production Planning.</li>
+                                    <li><strong>UTI – Ecopetrol Sensor Project (Dec 2003 - Apr 2006) | PMO & QA Practitioner:</strong> Built tracking tools in VB.Net/SQL and e-learning systems for Change Management. Promoted to Data Quality Auditor.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Keralty</span>
+                                <span class="tag-chip">ColdStar (300+ Planta)</span>
+                                <span class="tag-chip">VB.Net & SQL</span>
+                                <span class="tag-chip">Formación PMP®</span>
                             </div>
                         </div>
                     </div>
