@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Castañeda | Fractional PMO & Delivery Excellence Director</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e3a8a;
+            --accent: #0284c7;
+            --accent-light: #f0f9ff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Rules para cambio de idioma */
+        body.lang-es .lang-en { display: none !important; }
+        body.lang-en .lang-es { display: none !important; }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        .lang-switch {
+            display: flex;
+            background-color: #1e293b;
+            border-radius: 6px;
+            padding: 2px;
+            border: 1px solid #334155;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-header {
+            background-color: var(--accent);
+            color: var(--white) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-header:hover {
+            background-color: #0369a1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 4rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-banner-wrapper {
+            width: 100%;
+            margin-bottom: 3rem;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(2, 132, 199, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #7dd3fc;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0369a1;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid #475569;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Metrics Grid */
+        .metrics-section {
+            margin-top: -3rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .metrics-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .metric-card .number {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-card .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* General Section Layout */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Pains Section */
+        .pains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pain-card {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border);
+            border-left: 4px solid #ef4444;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .pain-card h3 {
+            color: #991b1b;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .pain-card p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .service-type {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-pricing {
+            background-color: var(--accent-light);
+            border: 1px solid #bae6fd;
+            color: #0369a1;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* About Section */
+        .about-bg {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-card {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+
+        .main-photo-wrapper {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .about-card .title {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-linkedin {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0a66c2;
+            color: var(--white) !important;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin: 0.5rem 0 1.25rem;
+            transition: background-color 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-linkedin:hover {
+            background-color: #004182;
+        }
+
+        .cert-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.25rem;
+        }
+
+        .cert-chip {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.35rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .pillar-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem;
+            border-radius: 6px;
+        }
+
+        .pillar-item h4 {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* Contact Section & Dynamic Form Styling */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #090d16 100%);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            margin: 4rem 2rem 5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-header h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Estilos dinámicos para notificaciones de estado */
+        .fs-status-msg {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none; /* Controlado dinámicamente con JS */
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .fs-status-msg.status-success {
+            display: block;
+            background-color: rgba(16, 185, 129, 0.15);
+            border: 1px solid #10b981;
+            color: #34d399;
+        }
+
+        .fs-status-msg.status-error {
+            display: block;
+            background-color: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            color: #f87171;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            color: var(--white);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: #64748b;
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.1em;
+            cursor: pointer;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            grid-column: span 2;
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 1rem;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #64748b;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .metrics-section { margin-top: 2rem; }
+            .contact-form { grid-template-columns: 1fr; }
+            .form-group.full-width, .form-submit-btn { grid-column: span 1; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body class="lang-en">
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Daniel <span>Castañeda</span></a>
+            <nav>
+                <a href="#soluciones" class="lang-es">Soluciones</a>
+                <a href="#soluciones" class="lang-en">Solutions</a>
+
+                <a href="#servicios" class="lang-es">Servicios</a>
+                <a href="#servicios" class="lang-en">Services</a>
+
+                <a href="#acerca" class="lang-es">Acerca de Mí</a>
+                <a href="#acerca" class="lang-en">About Me</a>
+
+                <div class="lang-switch">
+                    <button class="lang-btn" id="btn-es" onclick="switchLang('es')">ES</button>
+                    <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">EN</button>
+                </div>
+
+                <a href="#contacto" class="btn-header lang-es">Agendar Diagnóstico</a>
+                <a href="#contacto" class="btn-header lang-en">Book Audit</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-banner-wrapper">
+                <img src="banner.png" alt="Turning strategy into measurable impact" class="hero-banner-img">
+            </div>
+
+            <span class="badge lang-es">Rigor Enterprise a Velocidad Fraccionada</span>
+            <span class="badge lang-en">Enterprise Rigor at Fractional Speed</span>
+
+            <h1 class="lang-es">Optimice sus Operaciones de Delivery e Integre IA Real en su Flujo Operativo</h1>
+            <h1 class="lang-en">Optimize Delivery Operations & Integrate Pragmatic AI into Your Workflow</h1>
+
+            <p class="lang-es">Acompaño a COOs y VPs de Tecnología a eliminar cuellos de botella, mejorar la predictibilidad en un 60% e implementar Inteligencia Artificial pragmática sin los costos de un ejecutivo full-time.</p>
+            <p class="lang-en">I help COOs and VPs of Technology remove operational bottlenecks, boost delivery predictability by 60%, and deploy practical AI without full-time executive overhead.</p>
+
+            <div class="cta-group">
+                <a href="#contacto" class="btn-primary lang-es">Solicitar Diagnóstico Operativo</a>
+                <a href="#contacto" class="btn-primary lang-en">Request Operational Audit</a>
+                <a href="#servicios" class="btn-outline lang-es">Explorar Servicios</a>
+                <a href="#servicios" class="btn-outline lang-en">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Bar -->
+    <div class="metrics-section">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="number">22+</div>
+                <div class="label lang-es">Años de Experiencia</div>
+                <div class="label lang-en">Years of Experience</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">-40%</div>
+                <div class="label">Time-to-Market</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">+60%</div>
+                <div class="label lang-es">Predictibilidad</div>
+                <div class="label lang-en">Predictability</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">$50M</div>
+                <div class="label lang-es">USD en PMOs Dirigidas</div>
+                <div class="label lang-en">USD Managed PMOs</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Executive Pains -->
+    <section class="section" id="soluciones">
+        <div class="section-header">
+            <h2 class="lang-es">¿Su Operación de Delivery Superó sus Procesos Actuales?</h2>
+            <h2 class="lang-en">Have Your Delivery Operations Outgrown Your Processes?</h2>
+
+            <p class="lang-es">Principales fricciones operativas que enfrentan las empresas Mid-Market y Scale-Ups en aceleración</p>
+            <p class="lang-en">Key operational friction points facing mid-market enterprises and fast-growing scale-ups</p>
+        </div>
+        <div class="pains-grid">
+            <div class="pain-card">
+                <h3 class="lang-es">Delivery Caótico y Pérdida de Margen</h3>
+                <h3 class="lang-en">Chaotic Delivery & Margin Erosion</h3>
+                <p class="lang-es">Retrasos recurrentes por falta de visibilidad en tiempo real, desviaciones presupuestarias no detectadas y ausencia de métricas clave (SPI/CPI).</p>
+                <p class="lang-en">Recurring delays caused by lack of real-time visibility, undetected budget variances, and missing core execution metrics (SPI/CPI).</p>
+            </div>
+            <div class="pain-card">
+                <h3 class="lang-es">IA Teórica y Sin Impacto Real</h3>
+                <h3 class="lang-en">Theoretical AI Without Real Impact</h3>
+                <p class="lang-es">Presión ejecutiva por adoptar IA que termina en presentaciones estratégicas o herramientas cosméticas desconectadas del trabajo operativo diario.</p>
+                <p class="lang-en">Executive pressure to adopt AI that ends up in slide decks or cosmetic tools disconnected from day-to-day operational execution.</p>
+            </div>
+            <div class="pain-card">
+                <h3 class="lang-es">Brecha Cultural US / LATAM</h3>
+                <h3 class="lang-en">US / LATAM Cultural & Operational Gap</h3>
+                <p class="lang-es">Desalineación entre las directrices globales de la Junta (EE. UU. / Europa) y los centros ejecutores de delivery en Latinoamérica.</p>
+                <p class="lang-en">Misalignment between global Board governance (US/Europe) and nearshore execution hubs across Latin America.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Services -->
+    <section class="section" id="servicios">
+        <div class="section-header">
+            <h2 class="lang-es">Modelos de Engagement y Propuesta de Valor</h2>
+            <h2 class="lang-en">Engagement Models & Value Proposition</h2>
+
+            <p class="lang-es">Soluciones diseñadas para cubrir las necesidades operativas de la alta dirección</p>
+            <p class="lang-en">Structured solutions designed to address executive operational requirements</p>
+        </div>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <div>
+                    <div class="service-type lang-es">Liderazgo Bajo Demanda</div>
+                    <div class="service-type lang-en">On-Demand Leadership</div>
+
+                    <h3>Fractional PMO & Delivery Director</h3>
+
+                    <p class="lang-es">Intervención ejecutiva por 3 a 6 meses para implementar gobernanza, matrices RAID y ritmos de reporte, asegurando un traspaso 100% autónomo.</p>
+                    <p class="lang-en">3 to 6-month executive intervention to establish governance, RAID matrices, and reporting rhythms, ensuring a 100% autonomous handover.</p>
+
+                    <ul class="feature-list lang-es">
+                        <li>Implementación de ritmo operativo y SLAs/KPIs</li>
+                        <li>Monitoreo de rendimiento con métricas SPI y CPI</li>
+                        <li>Traspaso y capacitación para autonomía interna</li>
+                    </ul>
+                    <ul class="feature-list lang-en">
+                        <li>Operational cadence and SLA/KPI setup</li>
+                        <li>Performance monitoring with SPI and CPI metrics</li>
+                        <li>Handover and training for internal autonomy</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="service-pricing lang-es">Retainer Mensual ($150 - $250 USD/hora equiv.)</div>
+                    <div class="service-pricing lang-en">Monthly Retainer ($150 - $250 USD/hr equiv.)</div>
+
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Agendar Consulta</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Book Consultation</a>
+                </div>
+            </div>
+
+            <div class="service-card" style="border-color: var(--accent);">
+                <div>
+                    <div class="service-type lang-es">Sprint Acelerado (6-10 Semanas)</div>
+                    <div class="service-type lang-en">Accelerated Sprint (6-10 Weeks)</div>
+
+                    <h3>AI Adoption in Delivery Operations</h3>
+
+                    <p class="lang-es">Integración directa de Inteligencia Artificial en los procesos operacionales (Power BI Copilot, Tableau Pulse) para la toma de decisiones basada en datos.</p>
+                    <p class="lang-en">Direct integration of Artificial Intelligence into delivery processes (Power BI Copilot, Tableau Pulse) for data-driven decision making.</p>
+
+                    <ul class="feature-list lang-es">
+                        <li>Auditoría de flujos operacionales y reportabilidad</li>
+                        <li>Despliegue de dashboards interactivos asistidos por IA</li>
+                        <li>Capacitación del equipo directivo y ejecutor</li>
+                    </ul>
+                    <ul class="feature-list lang-en">
+                        <li>Audit of operational flows and reporting systems</li>
+                        <li>Deployment of AI-assisted interactive dashboards</li>
+                        <li>Executive leadership and team training</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="service-pricing lang-es">Proyecto Cerrado (Fixed-Fee)</div>
+                    <div class="service-pricing lang-en">Fixed-Fee Project</div>
+
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Evaluar Sprint de IA</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Evaluate AI Sprint</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-type lang-es">Escalado Intercultural</div>
+                    <div class="service-type lang-en">Cross-Cultural Scaling</div>
+
+                    <h3>Agile Transformation & Change (Bilingual)</h3>
+
+                    <p class="lang-es">Estructuración del Centro de Excelencia (CoE) y escalado de marcos ágiles con comunicación bilingüe fluida (ES/EN).</p>
+                    <p class="lang-en">Establishment of Centers of Excellence (CoE) and scaling of agile frameworks with seamless bilingual communication (ES/EN).</p>
+
+                    <ul class="feature-list lang-es">
+                        <li>Alineación entre stakeholders globales y hubs LATAM</li>
+                        <li>Evaluación y elevación de madurez ágil (3.8 → 4.2+)</li>
+                        <li>Instrucción directiva ejecutiva bilingüe</li>
+                    </ul>
+                    <ul class="feature-list lang-en">
+                        <li>Alignment between global stakeholders and LATAM hubs</li>
+                        <li>Agile maturity assessment and uplift (3.8 → 4.2+)</li>
+                        <li>Bilingual executive leadership coaching</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="service-pricing lang-es">Proyectos por Hitos / Consultoría Exec</div>
+                    <div class="service-pricing lang-en">Milestone-Based / Exec Consulting</div>
+
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Consultar Alcance</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Discuss Scope</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section: About Me / Acerca de Mí -->
+    <div class="about-bg">
+        <section class="section" id="acerca">
+            <div class="section-header">
+                <h2 class="lang-es">Acerca de Mí</h2>
+                <h2 class="lang-en">About Me</h2>
+
+                <p class="lang-es">Liderazgo estratégico, gobernanza enterprise e innovación práctica en la entrega de tecnología</p>
+                <p class="lang-en">Strategic leadership, enterprise governance, and practical tech delivery innovation</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="main-photo-wrapper">
+                        <img src="profile.png" alt="Daniel Antonio Castañeda Forero" class="main-photo">
+                    </div>
+
+                    <h3>Daniel Antonio Castañeda Forero</h3>
+                    <div class="title">Fractional PMO & Delivery Excellence Director</div>
+                    
+                    <p class="lang-es" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                        Líder ejecutivo especializado en la transformación operacional, escalado de hubs cerca de la frontera (nearshore) e integración de Inteligencia Artificial en flujos corporativos.
+                    </p>
+                    <p class="lang-en" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                        Executive leader specialized in operational transformation, nearshore hub scaling, and integrating AI into corporate workflows.
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/danielcastanedapmp/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
+                        <svg style="width:16px; height:16px; fill:currentColor; vertical-align:middle; margin-right:6px;" viewBox="0 0 24 24">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+                        </svg>
+                        <span class="lang-es">Ver Perfil de LinkedIn</span>
+                        <span class="lang-en">View LinkedIn Profile</span>
+                    </a>
+
+                    <div class="cert-list">
+                        <span class="cert-chip">PMP®</span>
+                        <span class="cert-chip">CSM®</span>
+                        <span class="cert-chip">SAFe® Agilist</span>
+                        <span class="cert-chip lang-es">Bilingüe (ES/EN)</span>
+                        <span class="cert-chip lang-en">Bilingual (EN/ES)</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h3 class="lang-es">Más de dos décadas conectando la estrategia directiva con la ejecución impecable</h3>
+                    <h3 class="lang-en">Over two decades bridging executive strategy with flawless execution</h3>
+
+                    <p class="lang-es">
+                        A lo largo de más de 22 años en la industria tecnológica, he estructurado y dirigido Oficinas de Gestión de Proyectos (PMO) con presupuestos superiores a los $50M USD y he liderado el crecimiento de centros de desarrollo regional desde cero hasta más de 650 profesionales.
+                    </p>
+                    <p class="lang-en">
+                        Over more than 22 years in the tech industry, I have structured and directed Project Management Offices (PMO) with budgets exceeding $50M USD and led the growth of regional development hubs from scratch to over 650 professionals.
+                    </p>
+
+                    <p class="lang-es">
+                        Mi enfoque como Director Fraccionado combina la estructura rigurosa que exige la alta dirección con la agilidad y adaptación necesarias para mantener equipos de alto rendimiento. Actúo como un puente fluido entre directivos en Estados Unidos o Europa y equipos ejecutores en Latinoamérica, eliminando barreras culturales y asegurando visibilidad total mediante datos objetivos (SPI/CPI).
+                    </p>
+                    <p class="lang-en">
+                        My approach as a Fractional Director combines the rigorous structure required by C-level executives with the agility and adaptation needed to sustain high-performing teams. I act as a seamless bridge between leadership in the US or Europe and delivery teams in LATAM, removing cultural barriers and ensuring full visibility through objective data (SPI/CPI).
+                    </p>
+
+                    <div class="pillars-grid">
+                        <div class="pillar-item">
+                            <h4 class="lang-es">Gobernanza Pragmática</h4>
+                            <h4 class="lang-en">Pragmatic Governance</h4>
+                            <p class="lang-es">Procesos claros que habilitan la velocidad sin sacrificar el control financiero ni la calidad.</p>
+                            <p class="lang-en">Clear processes that enable speed without sacrificing financial control or quality.</p>
+                        </div>
+                        <div class="pillar-item">
+                            <h4 class="lang-es">IA Operativa</h4>
+                            <h4 class="lang-en">Operational AI</h4>
+                            <p class="lang-es">Uso directo de analítica avanzada e IA en tableros y flujos diarios para decisiones rápidas.</p>
+                            <p class="lang-en">Direct use of advanced analytics and AI in daily dashboards and workflows for rapid decisions.</p>
+                        </div>
+                        <div class="pillar-item">
+                            <h4 class="lang-es">Liderazgo Bilingüe</h4>
+                            <h4 class="lang-en">Bilingual Leadership</h4>
+                            <p class="lang-es">Alineación perfecta entre expectativas de juntas directivas en EE. UU. y la ejecución en LATAM.</p>
+                            <p class="lang-en">Flawless alignment between US Board expectations and LATAM execution teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Form Section with Dynamic Formspree Response Handling -->
+    <div class="contact-section" id="contacto">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="lang-es">¿Listo para Optimizar su Operación de Delivery?</h2>
+                <h2 class="lang-en">Ready to Optimize Your Delivery Operations?</h2>
+
+                <p class="lang-es">Complete el formulario a continuación para solicitar un diagnóstico estratégico de 30 minutos sin costo.</p>
+                <p class="lang-en">Fill out the form below to request a complimentary 30-minute strategic audit session.</p>
+            </div>
+
+            <!-- Dynamic Notification Containers -->
+            <div id="status-success" class="fs-status-msg">
+                <span class="lang-es">¡Gracias! Su mensaje ha sido enviado correctamente. Me pondré en contacto con usted a la brevedad.</span>
+                <span class="lang-en">Thank you! Your message has been sent successfully. I will get in touch with you shortly.</span>
+            </div>
+            
+            <div id="status-error" class="fs-status-msg">
+                <span class="lang-es">Hubo un error al enviar el formulario. Por favor verifique sus datos e intente nuevamente.</span>
+                <span class="lang-en">There was an error submitting the form. Please check your inputs and try again.</span>
+            </div>
+
+            <!-- Formspree Form -->
+            <form id="contact-form" action="https://formspree.io/f/xnpqpnwv" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label class="form-label lang-es" for="name">Nombre Completo *</label>
+                    <label class="form-label lang-en" for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label lang-es" for="email">Correo Corporativo *</label>
+                    <label class="form-label lang-en" for="email">Corporate Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="carlos@empresa.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label lang-es" for="company">Empresa / Cargo</label>
+                    <label class="form-label lang-en" for="company">Company / Role</label>
+                    <input type="text" id="company" name="company" class="form-control" placeholder="VP of Engineering / COO">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label lang-es" for="service">Servicio de Interés</label>
+                    <label class="form-label lang-en" for="service">Service of Interest</label>
+                    <select id="service" name="service" class="form-control">
+                        <option value="Fractional PMO & Delivery Director" class="lang-es">Fractional PMO & Delivery Director</option>
+                        <option value="AI Adoption in Delivery Operations" class="lang-es">Adopción de IA en Operaciones</option>
+                        <option value="Agile Transformation & Change" class="lang-es">Transformación Ágile & Cambio Intercultural</option>
+                        <option value="Diagnóstico Operativo General" class="lang-es">Diagnóstico Operativo General</option>
+                        
+                        <option value="Fractional PMO & Delivery Director" class="lang-en">Fractional PMO & Delivery Director</option>
+                        <option value="AI Adoption in Delivery Operations" class="lang-en">AI Adoption in Delivery Operations</option>
+                        <option value="Agile Transformation & Change" class="lang-en">Agile Transformation & Cross-Cultural Change</option>
+                        <option value="General Operational Audit" class="lang-en">General Operational Audit</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label class="form-label lang-es" for="message">Mensaje / Desafío Operativo *</label>
+                    <label class="form-label lang-en" for="message">Message / Operational Challenge *</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Describa brevemente los cuellos de botella o metas de su equipo..." required></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn-es" class="btn-primary form-submit-btn lang-es">Enviar Solicitud de Diagnóstico</button>
+                <button type="submit" id="submit-btn-en" class="btn-primary form-submit-btn lang-en">Submit Audit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Daniel Antonio Castañeda Forero — Fractional PMO & Delivery Excellence Director.</p>
+        <p class="lang-es">Disponible para engagements remotos globales y presenciales en LATAM.</p>
+        <p class="lang-en">Available for global remote engagements and on-site in LATAM.</p>
+    </footer>
+
+    <!-- Script para cambiar el idioma -->
+    <script>
+        function switchLang(lang) {
+            document.body.className = 'lang-' + lang;
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+
+    <!-- Dynamic AJAX Form Submission Script -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const successStatus = document.getElementById('status-success');
+        const errorStatus = document.getElementById('status-error');
+        const submitBtns = form.querySelectorAll('button[type="submit"]');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // 1. Ocultar notificaciones previas
+            successStatus.classList.remove('status-success');
+            errorStatus.classList.remove('status-error');
+
+            // 2. Deshabilitar botones durante el envío
+            submitBtns.forEach(btn => {
+                btn.disabled = true;
+                btn.dataset.originalText = btn.innerText;
+                btn.innerText = document.body.classList.contains('lang-es') ? 'Enviando...' : 'Sending...';
+            });
+
+            // 3. Enviar datos via Fetch API
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Mostrar banner de éxito y reiniciar formulario
+                    successStatus.classList.add('status-success');
+                    form.reset();
+                } else {
+                    // Mostrar banner de error en caso de fallo 4xx/5xx
+                    errorStatus.classList.add('status-error');
+                }
+            } catch (error) {
+                // Mostrar banner de error en caso de falla de red
+                errorStatus.classList.add('status-error');
+            } finally {
+                // Restaurar estado de los botones de envío
+                submitBtns.forEach(btn => {
+                    btn.disabled = false;
+                    btn.innerText = btn.dataset.originalText;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

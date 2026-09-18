@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Castañeda | Fractional PMO & Delivery Excellence Director</title>
+    <title>Daniel Castañeda | Fractional COO & Delivery Excellence Director</title>
     <style>
         :root {
             --primary: #0f172a;
@@ -33,7 +34,7 @@
             line-height: 1.6;
         }
 
-        /* Rules para cambio de idioma */
+        /* Reglas para cambio de idioma */
         body.lang-es .lang-en { display: none !important; }
         body.lang-en .lang-es { display: none !important; }
 
@@ -178,7 +179,7 @@
             font-size: 1.2rem;
             color: #cbd5e1;
             margin-bottom: 2.5rem;
-            max-width: 750px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -206,12 +207,6 @@
         .btn-primary:hover {
             background-color: #0369a1;
             transform: translateY(-2px);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
         }
 
         .btn-outline {
@@ -277,7 +272,7 @@
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 3.5rem;
         }
 
@@ -534,7 +529,253 @@
             line-height: 1.5;
         }
 
-        /* Contact Section & Dynamic Form Styling */
+        /* Estilos de la Línea de Tiempo */
+        .timeline-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .timeline-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item.is-hidden {
+            display: none !important;
+        }
+
+        .timeline-icon-badge {
+            position: absolute;
+            left: -3.25rem;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 4px var(--bg-light);
+        }
+
+        .timeline-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .timeline-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            background-color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            border: 1px solid #bae6fd;
+        }
+
+        .timeline-role {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-summary {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .sub-role-block {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .sub-role-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.92rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .sub-role-period {
+            font-size: 0.78rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        .timeline-toggle-btn:hover {
+            color: #0369a1;
+        }
+
+        .timeline-toggle-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            border-top: 1px dashed var(--border);
+            margin-top: 0.75rem;
+            padding-top: 0;
+        }
+
+        .timeline-details ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-details li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .timeline-details li::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: -0.1rem;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1rem;
+        }
+
+        .tag-chip {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .highlight-chip {
+            background-color: rgba(2, 132, 199, 0.12);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Contact Section & Form Styling */
         .contact-section {
             background: linear-gradient(135deg, var(--primary) 0%, #090d16 100%);
             color: var(--white);
@@ -565,14 +806,13 @@
             font-size: 1.1rem;
         }
 
-        /* Estilos dinámicos para notificaciones de estado */
         .fs-status-msg {
             text-align: center;
             font-weight: 700;
             margin-bottom: 1.5rem;
             padding: 1rem;
             border-radius: 8px;
-            display: none; /* Controlado dinámicamente con JS */
+            display: none;
             animation: fadeIn 0.3s ease-in-out;
         }
 
@@ -677,6 +917,9 @@
             .contact-form { grid-template-columns: 1fr; }
             .form-group.full-width, .form-submit-btn { grid-column: span 1; }
             nav { display: none; }
+            .timeline-container { padding-left: 1.5rem; }
+            .timeline-icon-badge { left: -2.25rem; width: 2rem; height: 2rem; }
+            .timeline-icon-badge svg { width: 14px; height: 14px; }
         }
     </style>
 </head>
@@ -714,20 +957,20 @@
                 <img src="banner.png" alt="Turning strategy into measurable impact" class="hero-banner-img">
             </div>
 
-            <span class="badge lang-es">Rigor Enterprise a Velocidad Fraccionada</span>
-            <span class="badge lang-en">Enterprise Rigor at Fractional Speed</span>
+            <span class="badge lang-es">Fractional COO Scope • Delivery Excellence • Business Growth</span>
+            <span class="badge lang-en">Fractional COO Scope • Delivery Excellence • Business Growth</span>
 
-            <h1 class="lang-es">Optimice sus Operaciones de Delivery e Integre IA Real en su Flujo Operativo</h1>
-            <h1 class="lang-en">Optimize Delivery Operations & Integrate Pragmatic AI into Your Workflow</h1>
+            <h1 class="lang-es">Transformo Operaciones Complejas en Motores Predecibles de Crecimiento y Rentabilidad</h1>
+            <h1 class="lang-en">Transforming Complex Delivery Operations into Predictable Engines of Growth & Profitability</h1>
 
-            <p class="lang-es">Acompaño a COOs y VPs de Tecnología a eliminar cuellos de botella, mejorar la predictibilidad en un 60% e implementar Inteligencia Artificial pragmática sin los costos de un ejecutivo full-time.</p>
-            <p class="lang-en">I help COOs and VPs of Technology remove operational bottlenecks, boost delivery predictability by 60%, and deploy practical AI without full-time executive overhead.</p>
+            <p class="lang-es">Acompaño a COOs, VPs y Juntas Directivas a establecer estándares rigurosos de proceso, expandir ventas/cuentas ($19.5M+ portafolios) y escalar centros de entrega multi-país con soporte de IA pragmática.</p>
+            <p class="lang-en">I partner with COOs, VPs, and Boards to establish rigorous process standards, drive commercial sales expansion ($19.5M+ portfolios), and scale multi-country delivery hubs powered by practical AI.</p>
 
             <div class="cta-group">
                 <a href="#contacto" class="btn-primary lang-es">Solicitar Diagnóstico Operativo</a>
                 <a href="#contacto" class="btn-primary lang-en">Request Operational Audit</a>
-                <a href="#servicios" class="btn-outline lang-es">Explorar Servicios</a>
-                <a href="#servicios" class="btn-outline lang-en">Explore Services</a>
+                <a href="#servicios" class="btn-outline lang-es">Explorar Servicios Fraccionados</a>
+                <a href="#servicios" class="btn-outline lang-en">Explore Fractional Services</a>
             </div>
         </div>
     </section>
@@ -736,23 +979,24 @@
     <div class="metrics-section">
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="number">22+</div>
-                <div class="label lang-es">Años de Experiencia</div>
-                <div class="label lang-en">Years of Experience</div>
+                <div class="number">$19.5M</div>
+                <div class="label lang-es">USD Portafolio de Ventas</div>
+                <div class="label lang-en">USD Managed Sales Portfolio</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">$8.3M</div>
+                <div class="label lang-es">USD Trato Enterprise Cerrado</div>
+                <div class="label lang-en">USD Enterprise Deal Closed</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">+650</div>
+                <div class="label lang-es">Colaboradores Escalados</div>
+                <div class="label lang-en">Collaborators Scaled</div>
             </div>
             <div class="metric-card">
                 <div class="number">-40%</div>
-                <div class="label">Time-to-Market</div>
-            </div>
-            <div class="metric-card">
-                <div class="number">+60%</div>
-                <div class="label lang-es">Predictibilidad</div>
-                <div class="label lang-en">Predictability</div>
-            </div>
-            <div class="metric-card">
-                <div class="number">$50M</div>
-                <div class="label lang-es">USD en PMOs Dirigidas</div>
-                <div class="label lang-en">USD Managed PMOs</div>
+                <div class="label lang-es">Time-to-Market / +60% Predictibilidad</div>
+                <div class="label lang-en">Time-to-Market / +60% Predictability</div>
             </div>
         </div>
     </div>
@@ -760,30 +1004,30 @@
     <!-- Section: Executive Pains -->
     <section class="section" id="soluciones">
         <div class="section-header">
-            <h2 class="lang-es">¿Su Operación de Delivery Superó sus Procesos Actuales?</h2>
-            <h2 class="lang-en">Have Your Delivery Operations Outgrown Your Processes?</h2>
+            <h2 class="lang-es">¿Falta de Estándares de Proceso y Pérdida de Margen Operativo?</h2>
+            <h2 class="lang-en">Lacking Process Standards & Losing Operational Margin?</h2>
 
-            <p class="lang-es">Principales fricciones operativas que enfrentan las empresas Mid-Market y Scale-Ups en aceleración</p>
-            <p class="lang-en">Key operational friction points facing mid-market enterprises and fast-growing scale-ups</p>
+            <p class="lang-es">Desafíos críticos que resuelvo asumiendo responsabilidad operativa de nivel COO y liderazgo de Delivery</p>
+            <p class="lang-en">Critical operational challenges resolved through COO-level execution and Delivery Excellence leadership</p>
         </div>
         <div class="pains-grid">
             <div class="pain-card">
-                <h3 class="lang-es">Delivery Caótico y Pérdida de Margen</h3>
-                <h3 class="lang-en">Chaotic Delivery & Margin Erosion</h3>
-                <p class="lang-es">Retrasos recurrentes por falta de visibilidad en tiempo real, desviaciones presupuestarias no detectadas y ausencia de métricas clave (SPI/CPI).</p>
-                <p class="lang-en">Recurring delays caused by lack of real-time visibility, undetected budget variances, and missing core execution metrics (SPI/CPI).</p>
+                <h3 class="lang-es">Gobernanza Frágil y Erosión de Margen</h3>
+                <h3 class="lang-en">Fragile Governance & Margin Erosion</h3>
+                <p class="lang-es">Procesos informales sin métricas EVM/SPI/CPI ni SLAs claros, provocando sobrecostos, desviaciones en contratos y fricción en la entrega multi-proveedor.</p>
+                <p class="lang-en">Informal processes lacking EVM/SPI/CPI metrics and formal SLAs, causing budget overruns, contract scope creep, and multi-vendor delivery friction.</p>
             </div>
             <div class="pain-card">
-                <h3 class="lang-es">IA Teórica y Sin Impacto Real</h3>
-                <h3 class="lang-en">Theoretical AI Without Real Impact</h3>
-                <p class="lang-es">Presión ejecutiva por adoptar IA que termina en presentaciones estratégicas o herramientas cosméticas desconectadas del trabajo operativo diario.</p>
-                <p class="lang-en">Executive pressure to adopt AI that ends up in slide decks or cosmetic tools disconnected from day-to-day operational execution.</p>
+                <h3 class="lang-es">Desconexión Comercial y de Delivery</h3>
+                <h3 class="lang-en">Commercial & Delivery Disconnect</h3>
+                <p class="lang-es">Ventas desalineadas de la capacidad operacional real, falta de estrategias de Sales Enablement y pérdida de oportunidades de upselling en cuentas clave.</p>
+                <p class="lang-en">Sales promises disconnected from real operational capacity, missing Sales Enablement structures, and lost upselling opportunities within core accounts.</p>
             </div>
             <div class="pain-card">
-                <h3 class="lang-es">Brecha Cultural US / LATAM</h3>
-                <h3 class="lang-en">US / LATAM Cultural & Operational Gap</h3>
-                <p class="lang-es">Desalineación entre las directrices globales de la Junta (EE. UU. / Europa) y los centros ejecutores de delivery en Latinoamérica.</p>
-                <p class="lang-en">Misalignment between global Board governance (US/Europe) and nearshore execution hubs across Latin America.</p>
+                <h3 class="lang-es">Escalamiento Caótico Nearshore</h3>
+                <h3 class="lang-en">Chaotic Nearshore Hub Scaling</h3>
+                <p class="lang-es">Dificultad para estandarizar procesos operativos, cultura y ritmos de trabajo entre ejecutivos en EE. UU. / Europa y equipos técnicos en LATAM.</p>
+                <p class="lang-en">Inability to standardize process frameworks, culture, and operational cadences between US/Europe C-Level stakeholders and LATAM execution hubs.</p>
             </div>
         </div>
     </section>
@@ -791,132 +1035,132 @@
     <!-- Section: Services -->
     <section class="section" id="servicios">
         <div class="section-header">
-            <h2 class="lang-es">Modelos de Engagement y Propuesta de Valor</h2>
-            <h2 class="lang-en">Engagement Models & Value Proposition</h2>
+            <h2 class="lang-es">Servicios Fraccionados y Liderazgo Bajo Demanda</h2>
+            <h2 class="lang-en">Fractional Services & On-Demand Leadership</h2>
 
-            <p class="lang-es">Soluciones diseñadas para cubrir las necesidades operativas de la alta dirección</p>
-            <p class="lang-en">Structured solutions designed to address executive operational requirements</p>
+            <p class="lang-es">Intervenciones directivas diseñadas para elevar el estándar operacional, acelerar ventas y proteger el margen</p>
+            <p class="lang-en">Executive interventions engineered to uplift operational standards, drive sales growth, and safeguard margins</p>
         </div>
         <div class="services-grid">
             
             <div class="service-card">
                 <div>
-                    <div class="service-type lang-es">Liderazgo Bajo Demanda</div>
-                    <div class="service-type lang-en">On-Demand Leadership</div>
+                    <div class="service-type lang-es">Responsabilidad Nivel COO</div>
+                    <div class="service-type lang-en">COO Scope Leadership</div>
 
-                    <h3>Fractional PMO & Delivery Director</h3>
+                    <h3>Fractional COO & Delivery Director</h3>
 
-                    <p class="lang-es">Intervención ejecutiva por 3 a 6 meses para implementar gobernanza, matrices RAID y ritmos de reporte, asegurando un traspaso 100% autónomo.</p>
-                    <p class="lang-en">3 to 6-month executive intervention to establish governance, RAID matrices, and reporting rhythms, ensuring a 100% autonomous handover.</p>
+                    <p class="lang-es">Intervención de 3 a 6 meses para diseñar e instaurar estándares de proceso, gobernanza de proyectos, control financiero (EVM) y optimización de capacidad operativa.</p>
+                    <p class="lang-en">3 to 6-month engagement establishing process standards, project governance, financial EVM control, and delivery capacity optimization.</p>
 
                     <ul class="feature-list lang-es">
-                        <li>Implementación de ritmo operativo y SLAs/KPIs</li>
-                        <li>Monitoreo de rendimiento con métricas SPI y CPI</li>
-                        <li>Traspaso y capacitación para autonomía interna</li>
+                        <li>Diseño de modelos operativos COBIT/ITIL/eTOM y SLAs</li>
+                        <li>Protección de margen, monitoreo SPI/CPI y matrices RAID</li>
+                        <li>Escalamiento de fábricas de software y hubs nearshore (+650 pros)</li>
                     </ul>
                     <ul class="feature-list lang-en">
-                        <li>Operational cadence and SLA/KPI setup</li>
-                        <li>Performance monitoring with SPI and CPI metrics</li>
-                        <li>Handover and training for internal autonomy</li>
+                        <li>COBIT/ITIL/eTOM operating model setup & SLAs</li>
+                        <li>Margin protection, SPI/CPI tracking & RAID risk controls</li>
+                        <li>Nearshore software factory scaling (+650 collaborators)</li>
                     </ul>
                 </div>
                 <div>
                     <div class="service-pricing lang-es">Retainer Mensual ($150 - $250 USD/hora equiv.)</div>
                     <div class="service-pricing lang-en">Monthly Retainer ($150 - $250 USD/hr equiv.)</div>
 
-                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Agendar Consulta</a>
-                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Book Consultation</a>
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Agendar Consulta COO</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Book COO Consultation</a>
                 </div>
             </div>
 
             <div class="service-card" style="border-color: var(--accent);">
                 <div>
-                    <div class="service-type lang-es">Sprint Acelerado (6-10 Semanas)</div>
-                    <div class="service-type lang-en">Accelerated Sprint (6-10 Weeks)</div>
+                    <div class="service-type lang-es">Crecimiento & Sales Enablement</div>
+                    <div class="service-type lang-en">Growth & Sales Enablement</div>
 
-                    <h3>AI Adoption in Delivery Operations</h3>
+                    <h3>Commercial Growth & Account Scaling</h3>
 
-                    <p class="lang-es">Integración directa de Inteligencia Artificial en los procesos operacionales (Power BI Copilot, Tableau Pulse) para la toma de decisiones basada en datos.</p>
-                    <p class="lang-en">Direct integration of Artificial Intelligence into delivery processes (Power BI Copilot, Tableau Pulse) for data-driven decision making.</p>
+                    <p class="lang-es">Estructuración de procesos de venta técnica, Sales Enablement, pricing estratégico y expansión de presupuestos de cuentas clave (up-selling/cross-selling).</p>
+                    <p class="lang-en">Technical sales process design, Sales Enablement frameworks, strategic pricing, and account budget expansion (upselling/cross-selling).</p>
 
                     <ul class="feature-list lang-es">
-                        <li>Auditoría de flujos operacionales y reportabilidad</li>
-                        <li>Despliegue de dashboards interactivos asistidos por IA</li>
-                        <li>Capacitación del equipo directivo y ejecutor</li>
+                        <li>Alineación entre propuesta comercial y capacidad de delivery</li>
+                        <li>Cierre contractual de tratos enterprise (experiencia en tratos de $8.3M USD)</li>
+                        <li>Estrategias de expansión de cuentas (crecimiento de 3x a 7x en contrato)</li>
                     </ul>
                     <ul class="feature-list lang-en">
-                        <li>Audit of operational flows and reporting systems</li>
-                        <li>Deployment of AI-assisted interactive dashboards</li>
-                        <li>Executive leadership and team training</li>
+                        <li>Commercial pitch and delivery capability alignment</li>
+                        <li>Enterprise contract closures (proven track record with $8.3M deals)</li>
+                        <li>Account growth strategies (proven 3x-7x contract expansion)</li>
                     </ul>
                 </div>
                 <div>
-                    <div class="service-pricing lang-es">Proyecto Cerrado (Fixed-Fee)</div>
-                    <div class="service-pricing lang-en">Fixed-Fee Project</div>
+                    <div class="service-pricing lang-es">Fixed-Fee / Base + Success Fee</div>
+                    <div class="service-pricing lang-en">Fixed-Fee / Base + Success Fee</div>
 
-                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Evaluar Sprint de IA</a>
-                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Evaluate AI Sprint</a>
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Evaluar Estrategia de Ventas</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Evaluate Sales Growth</a>
                 </div>
             </div>
 
             <div class="service-card">
                 <div>
-                    <div class="service-type lang-es">Escalado Intercultural</div>
-                    <div class="service-type lang-en">Cross-Cultural Scaling</div>
+                    <div class="service-type lang-es">Estándares de Proceso & IA</div>
+                    <div class="service-type lang-en">Process Standards & AI</div>
 
-                    <h3>Agile Transformation & Change (Bilingual)</h3>
+                    <h3>Process Standardization & AI Integration</h3>
 
-                    <p class="lang-es">Estructuración del Centro de Excelencia (CoE) y escalado de marcos ágiles con comunicación bilingüe fluida (ES/EN).</p>
-                    <p class="lang-en">Establishment of Centers of Excellence (CoE) and scaling of agile frameworks with seamless bilingual communication (ES/EN).</p>
+                    <p class="lang-es">Despliegue de arquitecturas de proceso estandarizadas, Lean Portfolio Management e Inteligencia Artificial aplicada a la gobernanza diaria.</p>
+                    <p class="lang-en">Deployment of standardized process architectures, Lean Portfolio Management, and applied AI in daily operational governance.</p>
 
                     <ul class="feature-list lang-es">
-                        <li>Alineación entre stakeholders globales y hubs LATAM</li>
-                        <li>Evaluación y elevación de madurez ágil (3.8 → 4.2+)</li>
-                        <li>Instrucción directiva ejecutiva bilingüe</li>
+                        <li>Estandarización de flujos de trabajo e indicadores de madurez (3.8 → 4.2+)</li>
+                        <li>Tableros de control en tiempo real (Power BI, Tableau, eazyBI)</li>
+                        <li>Capacitación de ejecutivos y líderes de PMO (+500 hrs impartidas)</li>
                     </ul>
                     <ul class="feature-list lang-en">
-                        <li>Alignment between global stakeholders and LATAM hubs</li>
-                        <li>Agile maturity assessment and uplift (3.8 → 4.2+)</li>
-                        <li>Bilingual executive leadership coaching</li>
+                        <li>Workflow standardization & maturity assessments (3.8 → 4.2+)</li>
+                        <li>Real-time executive dashboards (Power BI, Tableau, eazyBI)</li>
+                        <li>Executive leadership & PMO coaching (500+ hours delivered)</li>
                     </ul>
                 </div>
                 <div>
-                    <div class="service-pricing lang-es">Proyectos por Hitos / Consultoría Exec</div>
-                    <div class="service-pricing lang-en">Milestone-Based / Exec Consulting</div>
+                    <div class="service-pricing lang-es">Proyecto Cerrado (Fixed-Fee Sprint)</div>
+                    <div class="service-pricing lang-en">Fixed-Fee Sprint Project</div>
 
-                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Consultar Alcance</a>
-                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Discuss Scope</a>
+                    <a href="#contacto" class="btn-primary lang-es" style="display:block; text-align:center;">Solicitar Plan de Estándares</a>
+                    <a href="#contacto" class="btn-primary lang-en" style="display:block; text-align:center;">Request Standards Audit</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Section: About Me / Acerca de Mí -->
+    <!-- Section: About Me / Acerca de Mí + Complete Interactive Timeline -->
     <div class="about-bg">
         <section class="section" id="acerca">
             <div class="section-header">
                 <h2 class="lang-es">Acerca de Mí</h2>
                 <h2 class="lang-en">About Me</h2>
 
-                <p class="lang-es">Liderazgo estratégico, gobernanza enterprise e innovación práctica en la entrega de tecnología</p>
-                <p class="lang-en">Strategic leadership, enterprise governance, and practical tech delivery innovation</p>
+                <p class="lang-es">Especialista en Liderazgo Operativo nivel COO, Crecimiento Comercial de Cuentas, Estándares de Proceso y Delivery Excellence</p>
+                <p class="lang-en">Specialized in COO-level Leadership, Commercial Business Growth, Process Standardization, and Delivery Excellence</p>
             </div>
 
             <div class="about-grid">
                 <div class="about-card">
                     <div class="main-photo-wrapper">
-                        <img src="profile.png" alt="Daniel Antonio Castañeda Forero" class="main-photo">
+                        <img src="profile.jpg" alt="Daniel Antonio Castañeda Forero" class="main-photo">
                     </div>
 
                     <h3>Daniel Antonio Castañeda Forero</h3>
-                    <div class="title">Fractional PMO & Delivery Excellence Director</div>
+                    <div class="title">Fractional COO & Delivery Excellence Director</div>
                     
                     <p class="lang-es" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-                        Líder ejecutivo especializado en la transformación operacional, escalado de hubs cerca de la frontera (nearshore) e integración de Inteligencia Artificial en flujos corporativos.
+                        Líder ejecutivo bilingüe especializado en dirección operativa (COO Scope), crecimiento de ventas corporativas ($19.5M+ portafolios), creación de estándares de procesos e integración de IA en flujos globales.
                     </p>
                     <p class="lang-en" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-                        Executive leader specialized in operational transformation, nearshore hub scaling, and integrating AI into corporate workflows.
+                        Bilingual executive specialized in operational leadership (COO scope), commercial growth ($19.5M+ sales portfolios), process standardization, and AI workflow integration.
                     </p>
 
                     <a href="https://www.linkedin.com/in/danielcastanedapmp/" target="_blank" rel="noopener noreferrer" class="btn-linkedin">
@@ -937,43 +1181,478 @@
                 </div>
 
                 <div class="about-content">
-                    <h3 class="lang-es">Más de dos décadas conectando la estrategia directiva con la ejecución impecable</h3>
-                    <h3 class="lang-en">Over two decades bridging executive strategy with flawless execution</h3>
+                    <h3 class="lang-es">Más de 22 años conectando visión comercial, rigor de procesos y ejecución de clase mundial</h3>
+                    <h3 class="lang-en">Over 22 years bridging commercial vision, process rigor, and world-class execution</h3>
 
                     <p class="lang-es">
-                        A lo largo de más de 22 años en la industria tecnológica, he estructurado y dirigido Oficinas de Gestión de Proyectos (PMO) con presupuestos superiores a los $50M USD y he liderado el crecimiento de centros de desarrollo regional desde cero hasta más de 650 profesionales.
+                        A lo largo de más de 22 años en la industria tecnológica global, he liderado la dirección de operaciones y PMOs con presupuestos de hasta $50M USD, escalando centros de entrega regional hasta más de 650 profesionales y gestionando portafolios comerciales de ventas de $19.5M USD.
                     </p>
                     <p class="lang-en">
-                        Over more than 22 years in the tech industry, I have structured and directed Project Management Offices (PMO) with budgets exceeding $50M USD and led the growth of regional development hubs from scratch to over 650 professionals.
+                        Over more than 22 years in the global technology industry, I have directed operations and PMOs managing up to $50M USD budgets, scaling regional delivery hubs to 650+ professionals, and managing commercial sales portfolios worth $19.5M USD.
                     </p>
 
                     <p class="lang-es">
-                        Mi enfoque como Director Fraccionado combina la estructura rigurosa que exige la alta dirección con la agilidad y adaptación necesarias para mantener equipos de alto rendimiento. Actúo como un puente fluido entre directivos en Estados Unidos o Europa y equipos ejecutores en Latinoamérica, eliminando barreras culturales y asegurando visibilidad total mediante datos objetivos (SPI/CPI).
+                        Como Director Fraccionado y Consultor Senior, mi propuesta une la perspectiva de negocio del COO con la precisión metodológica necesaria para definir estándares claros de procesos (COBIT, ITIL, eTOM, SAFe, PMP). Elimino la brecha entre la estrategia de las Juntas Directivas en EE. UU./Europa y la ejecución en LATAM mediante datos objetivos (EVM, SPI/CPI).
                     </p>
                     <p class="lang-en">
-                        My approach as a Fractional Director combines the rigorous structure required by C-level executives with the agility and adaptation needed to sustain high-performing teams. I act as a seamless bridge between leadership in the US or Europe and delivery teams in LATAM, removing cultural barriers and ensuring full visibility through objective data (SPI/CPI).
+                        As a Fractional Director and Senior Consultant, my approach merges COO business acumen with the operational precision required to set clear process standards (COBIT, ITIL, eTOM, SAFe, PMP). I bridge the gap between Board strategy in the US/Europe and execution in LATAM through objective data (EVM, SPI/CPI).
                     </p>
 
                     <div class="pillars-grid">
                         <div class="pillar-item">
-                            <h4 class="lang-es">Gobernanza Pragmática</h4>
-                            <h4 class="lang-en">Pragmatic Governance</h4>
-                            <p class="lang-es">Procesos claros que habilitan la velocidad sin sacrificar el control financiero ni la calidad.</p>
-                            <p class="lang-en">Clear processes that enable speed without sacrificing financial control or quality.</p>
+                            <h4 class="lang-es">Responsabilidad COO</h4>
+                            <h4 class="lang-en">COO Scope</h4>
+                            <p class="lang-es">Visión integral de operaciones, control de costos, protección de margen y gestión de recursos.</p>
+                            <p class="lang-en">Holistic operations oversight, cost controls, margin protection, and resource management.</p>
                         </div>
                         <div class="pillar-item">
-                            <h4 class="lang-es">IA Operativa</h4>
-                            <h4 class="lang-en">Operational AI</h4>
-                            <p class="lang-es">Uso directo de analítica avanzada e IA en tableros y flujos diarios para decisiones rápidas.</p>
-                            <p class="lang-en">Direct use of advanced analytics and AI in daily dashboards and workflows for rapid decisions.</p>
+                            <h4 class="lang-es">Crecimiento Comercial</h4>
+                            <h4 class="lang-en">Business Growth</h4>
+                            <p class="lang-es">Sales Enablement, cierre de tratos de alto valor ($8.3M) y expansión de cuentas existentes.</p>
+                            <p class="lang-en">Sales Enablement, high-value deal closing ($8.3M), and core account expansion.</p>
                         </div>
                         <div class="pillar-item">
-                            <h4 class="lang-es">Liderazgo Bilingüe</h4>
-                            <h4 class="lang-en">Bilingual Leadership</h4>
-                            <p class="lang-es">Alineación perfecta entre expectativas de juntas directivas en EE. UU. y la ejecución en LATAM.</p>
-                            <p class="lang-en">Flawless alignment between US Board expectations and LATAM execution teams.</p>
+                            <h4 class="lang-es">Estándares de Proceso</h4>
+                            <h4 class="lang-en">Process Standards</h4>
+                            <p class="lang-es">Arquitectura de marcos de trabajo (COBIT, ITIL, eTOM, Agile/Lean) con métricas objetivas.</p>
+                            <p class="lang-en">Standardized framework setup (COBIT, ITIL, eTOM, Agile/Lean) backed by EVM metrics.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- SUBSECCIÓN: LÍNEA DE TIEMPO INTERACTIVA OPTIMIZADA CON FILTROS EXACTOS -->
+            <div class="timeline-section">
+                <h3 class="timeline-title lang-es">Trayectoria Profesional y Logros Clave (CV Maestro)</h3>
+                <h3 class="timeline-title lang-en">Master Career Journey & Detailed Impact</h3>
+
+                <p class="timeline-subtitle lang-es">Filtre según el pilar estratégico de su interés: Liderazgo COO, Ventas, Estándares de Proceso o Delivery Excellence</p>
+                <p class="timeline-subtitle lang-en">Filter by strategic focus area: COO Leadership, Sales Growth, Process Standards, or Delivery Excellence</p>
+
+                <!-- Filtros Dinámicos Exactos -->
+                <div class="timeline-filters">
+                    <button class="filter-btn active" onclick="filterTimeline('all', event)">
+                        <span class="lang-es">Todas las Experiencias</span>
+                        <span class="lang-en">All Experiences</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('coo', event)">
+                        <span class="lang-es">Liderazgo COO & Operaciones</span>
+                        <span class="lang-en">COO Scope & Operations</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('sales', event)">
+                        <span class="lang-es">Ventas & Crecimiento</span>
+                        <span class="lang-en">Sales & Growth</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('standards', event)">
+                        <span class="lang-es">Estándares de Proceso</span>
+                        <span class="lang-en">Process Standards</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterTimeline('delivery', event)">
+                        <span class="lang-es">Delivery Excellence</span>
+                        <span class="lang-en">Delivery Excellence</span>
+                    </button>
+                </div>
+
+                <!-- Contenedor de la Línea de Tiempo -->
+                <div class="timeline-container">
+
+                    <!-- ITEM 1: Grupo Loyal & IT Formation (Categorías: standards, sales, coo) -->
+                    <div class="timeline-item" data-category="standards sales coo">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Grupo Loyal & IT Formation (España)</span>
+                                <span class="timeline-date">2022 – Actual</span>
+                            </div>
+                            <div class="timeline-role lang-es">International Enterprise Trainer & Project Governance Consultant (Socio Estratégico)</div>
+                            <div class="timeline-role lang-en">International Enterprise Trainer & Project Governance Consultant (Strategic Partner)</div>
+
+                            <p class="timeline-summary lang-es"><strong>Creación de Estándares & Asesoría Ejecutiva:</strong> Diseñador y facilitador de arquitecturas avanzadas de gobernanza corporativa, predictibilidad de portafolio y mitigación de riesgo tecnológico operativo para ejecutivos C-Level en Europa y LATAM.</p>
+                            <p class="timeline-summary lang-en"><strong>Process Standards & Executive Advisory:</strong> Architect and facilitator of advanced corporate governance standards, portfolio predictability, and tech risk mitigation for C-Level leaders across Europe & LATAM.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-loyal', event)">
+                                <span class="lang-es">Ver detalles completos</span>
+                                <span class="lang-en">View complete details</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-loyal">
+                                <ul class="lang-es">
+                                    <li><strong>Estándares de Proceso:</strong> Instrucción e implementación de PMP® v7, PRINCE2®, Gobernanza de Datos (GDPR), Gestión del Cambio e ingeniería de flujo de valor Lean IT.</li>
+                                    <li><strong>Habilitación Ejecutiva:</strong> Entrega de +500 horas de formación técnica directiva a +700 ejecutivos, VPs de Tecnología y Directores de PMO.</li>
+                                    <li><strong>Desarrollo de Negocio:</strong> Consolidación de alianzas estratégicas de habilitación corporativa para multinacionales.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>Process Standards:</strong> Training & rollout of PMP® v7, PRINCE2®, Data Governance (GDPR), Change Management, and Lean IT value streams.</li>
+                                    <li><strong>Executive Enablement:</strong> Delivered 500+ instruction hours to 700+ VPs of Tech, PMO Directors, and C-Suite leaders.</li>
+                                    <li><strong>Business Development:</strong> Built strategic training and governance partnerships across enterprise clients.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">Process Standards</span>
+                                <span class="tag-chip">PMP® v7 & PRINCE2®</span>
+                                <span class="tag-chip">GDPR Governance</span>
+                                <span class="tag-chip">700+ Executives Trained</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2: Kinesso (Categorías: coo, delivery, standards) -->
+                    <div class="timeline-item" data-category="coo delivery standards">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Kinesso (Plataforma Global AdTech / MarTech)</span>
+                                <span class="timeline-date">Nov 2021 – Jul 2026</span>
+                            </div>
+
+                            <!-- Sub-rol 1 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">LATAM Agile Lead (Dirección Operativa Regional)</div>
+                                <div class="sub-role-title lang-en">LATAM Agile Lead (Regional Operational Director)</div>
+                                <span class="sub-role-period">Jun. 2024 – Jul. 2026</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Dirigí la transformación operacional escalando un hub distribuido de <strong>+300 profesionales</strong> en 5 verticales clave, instituyendo estándares homogéneos de reporte y ejecución:
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Directed operational transformation scaling a distributed hub of <strong>300+ professionals</strong> across 5 verticals, establishing unified execution standards:
+                                </p>
+                                <ul class="feature-list lang-es" style="margin-bottom:0.5rem; margin-top:0.4rem; font-size:0.85rem;">
+                                    <li>1. Segmentación de Mercados y Audiencias</li>
+                                    <li>2. <strong>ETL & Delivery Operations (multi-mercado)</strong></li>
+                                    <li>3. Visual Marketing y Contenido Creativo</li>
+                                    <li>4. Productos de Segmentación y Activación</li>
+                                    <li>5. Data Science y Analítica</li>
+                                </ul>
+                                <ul class="feature-list lang-en" style="margin-bottom:0.5rem; margin-top:0.4rem; font-size:0.85rem;">
+                                    <li>1. Market Segmentation & Audiences</li>
+                                    <li>2. <strong>ETL & Delivery Operations (multi-market)</strong></li>
+                                    <li>3. Visual Marketing & Creative Content</li>
+                                    <li>4. Market Activation & Segmentation Products</li>
+                                    <li>5. Data Science & Analytics</li>
+                                </ul>
+                            </div>
+
+                            <!-- Sub-rol 2 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Management Director – Colombia (COO Alignment)</div>
+                                <div class="sub-role-title lang-en">Project Management Director – Colombia (COO Scope)</div>
+                                <span class="sub-role-period">Ene. 2022 – Jul. 2026</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Co-lideré la creación y operación financiera/estructural de la fábrica de software para Colombia y LATAM, escalando a <strong>~650 colaboradores globales</strong> con un volumen operativo de USD 600K–1M/mes gobernado por SLAs formales.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Co-built and managed financial/operational structures for the software factory hub, scaling to <strong>~650 global collaborators</strong> with USD 600K–1M/mo run-rate under formal SLAs.
+                                </p>
+                            </div>
+
+                            <!-- Sub-rol 3 -->
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Sr. Scrum Master / Delivery Manager – Programa Big Data</div>
+                                <div class="sub-role-title lang-en">Sr. Scrum Master / Delivery Manager – Big Data Program</div>
+                                <span class="sub-role-period">Nov. 2021 – Jun. 2024</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Estandaricé el marco de trabajo ágil a la medida para acelerar la entrega de productos de datos altamente complejos.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Standardized custom scaled agile frameworks to accelerate high-complexity data engineering delivery.
+                                </p>
+                            </div>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-kinesso', event)">
+                                <span class="lang-es">Ver métricas de impacto operativo</span>
+                                <span class="lang-en">View operational impact metrics</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-kinesso">
+                                <ul class="lang-es">
+                                    <li><strong>Delivery Excellence:</strong> Reducción del Time-to-Market en 40% e incremento en predictibilidad en 60% mediante Lean Portfolio Management.</li>
+                                    <li><strong>Eficiencia Operativa:</strong> Multiplicación por 5x en la velocidad de los equipos e incremento en la madurez de proceso de 3.8 a 4.2/5.</li>
+                                    <li><strong>Gobernanza Visual:</strong> Despliegue de dashboards ejecutivos en tiempo real (Power BI, Tableau, eazyBI) para control de KPIs y salud operativa.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>Delivery Excellence:</strong> Cut Time-to-Market by 40% and raised delivery predictability by 60% via Lean Portfolio Management.</li>
+                                    <li><strong>Operational Efficiency:</strong> 5x team velocity increase while elevating process maturity scores from 3.8 to 4.2 out of 5.</li>
+                                    <li><strong>Visual Governance:</strong> Deployed real-time executive C-Suite reporting dashboards (Power BI, Tableau, eazyBI).</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">COO Scope</span>
+                                <span class="highlight-chip">Delivery Operations</span>
+                                <span class="tag-chip">Fábrica de Software 650 Pros</span>
+                                <span class="tag-chip">Power BI & Tableau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3: Gorilla Logic (Categorías: delivery, standards) -->
+                    <div class="timeline-item" data-category="delivery standards">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Gorilla Logic</span>
+                                <span class="timeline-date">Feb 2021 – Nov 2021</span>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Scrum Master – Cloud AD Services & Facelift App</div>
+                                <div class="sub-role-title lang-en">Scrum Master – Cloud AD Services & Facelift App</div>
+                                <span class="sub-role-period">Feb. 2021 – Nov. 2021</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Estandarización de Cadencia y Delivery Nearshore:</strong> Reduje el tiempo de ramp-up en 15% y aceleré la velocidad de entrega de features pasando de 9 semanas a menos de 4 semanas para equipos distribuidos (Colombia, Costa Rica, EE. UU.).
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Cadence Standardization & Nearshore Delivery:</strong> Cut ramp-up time by 15% and accelerated feature delivery cadence from 9 weeks to under 4 weeks across distributed teams (Colombia, Costa Rica, US).
+                                </p>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">Delivery Cadence</span>
+                                <span class="tag-chip">Cloud AD Services</span>
+                                <span class="tag-chip">Nearshore Coordination</span>
+                                <span class="tag-chip">Product Owner Delegado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4: Globant (Categorías: sales, coo, delivery) -->
+                    <div class="timeline-item" data-category="sales coo delivery">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Globant</span>
+                                <span class="timeline-date">Sep 2018 – Ene 2021</span>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Manager Lead | Sr. Delivery Manager – Crecimiento de Cuentas & Ventas</div>
+                                <div class="sub-role-title lang-en">Project Manager Lead | Sr. Delivery Manager – Business Growth & Account Expansion</div>
+                                <span class="sub-role-period">Sep. 2020 – Ene. 2021</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Cierre Comercial y Expansión:</strong> Estructuré y cerré la venta de una fábrica de software a Ecopetrol por <strong>USD 8.3M</strong>. Dirigí portafolios multi-cliente asegurando crecimiento orgánico: IHS Markit (escalado de $140K a $210K/mes), EY ($350K a $2.7M) y Carnival Cruise Lines ($230K/mes).
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Deal Closing & Expansion:</strong> Structured and closed a <strong>USD 8.3M</strong> software factory deal with Ecopetrol. Led multi-account portfolios driving expansion: IHS Markit (scaled $140K to $210K/mo), EY ($350K to $2.7M), Carnival Cruise ($230K/mo).
+                                </p>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Project Manager | Product Manager – EY Tax Platform (Crecimiento x7)</div>
+                                <div class="sub-role-title lang-en">Project Manager | Product Manager – EY Tax Platform (7x Growth)</div>
+                                <span class="sub-role-period">Jun. 2019 – Ago. 2020</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Actué como Product Manager definiendo la propuesta de valor técnica ante la alta dirección de EY; escalé el equipo de 7 a 18 profesionales y <strong>multipliqué por 7 el presupuesto del proyecto</strong> (de USD 350K a USD 2.7M).
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Served as Product Manager establishing technical solution vision for EY C-Suite; scaled team from 7 to 18 pros and <strong>expanded project budget 7x</strong> (from USD 350K to USD 2.7M).
+                                </p>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">Sales: $8.3M Enterprise Deal</span>
+                                <span class="highlight-chip">Account Expansion (7x Growth)</span>
+                                <span class="tag-chip">IHS Markit eTrading</span>
+                                <span class="tag-chip">EY C-Suite Advisory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5: Freelance (Categorías: standards, delivery) -->
+                    <div class="timeline-item" data-category="standards delivery">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Consultoría Freelance</span>
+                                <span class="timeline-date">Feb 2018 – Sep 2018</span>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Consultoría en Estándares de Infraestructura & Ágile</div>
+                                <div class="sub-role-title lang-en">Infrastructure & Agile Standards Consulting</div>
+                                <span class="sub-role-period">Feb. 2018 – Sep. 2018</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Definí estándares de infraestructura para 14 áreas operativas en Plossi e introduje estándares de trabajo ágil para 28 profesionales en Corficolombiana, asegurando la migración crítica de datos financieros.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    Established infrastructure process standards across 14 operational streams at Plossi and coached 28 finance professionals at Corficolombiana in agile delivery standards.
+                                </p>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Corficolombiana</span>
+                                <span class="tag-chip">Plossi</span>
+                                <span class="tag-chip">Agile Standards</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6: Accenture (Categorías: sales, standards, coo, delivery) -->
+                    <div class="timeline-item" data-category="sales standards coo delivery">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Accenture</span>
+                                <span class="timeline-date">Nov 2013 – Nov 2017</span>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">Sales Enablement Manager – Portafolio USD 19.5M (CMT)</div>
+                                <div class="sub-role-title lang-en">Sales Enablement Manager – USD 19.5M Portfolio (CMT)</div>
+                                <span class="sub-role-period">Ene. 2015 – Nov. 2017</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Gestión de Ventas & Crecimiento Comercial:</strong> Gestioné como punto focal un portafolio de ventas de <strong>USD 19.5M</strong> durante 3 años. Lideré la identificación de oportunidades, estructuración de propuestas técnicas, modelos de pricing, negociación contractual y aseguramiento de políticas C-Level.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Sales Enablement & Growth:</strong> Managed a <strong>USD 19.5M</strong> sales pipeline as focal point over 3 years. Led deal origination, technical proposal structuring, strategic pricing, contract negotiations, and C-Suite policy assurance.
+                                </p>
+                            </div>
+
+                            <div class="sub-role-block">
+                                <div class="sub-role-title lang-es">New IT Process Architect Lead – Arquitectura de Estándares</div>
+                                <div class="sub-role-title lang-en">New IT Process Architect Lead – Process Standards Setup</div>
+                                <span class="sub-role-period">Nov. 2016 – Mar. 2017</span>
+                                <p class="lang-es" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Creación de Estándares de Proceso:</strong> Rediseñé el modelo operativo completo para una gran organización de telecomunicaciones alineando los procesos a los estándares globales de referencia <strong>COBIT, ITIL y eTOM</strong>.
+                                </p>
+                                <p class="lang-en" style="font-size:0.88rem; color: var(--text-dark);">
+                                    <strong>Process Standards Creation:</strong> Redesigned the entire IT operating model for a major Telecom enterprise, standardizing workflows against <strong>COBIT, ITIL, and eTOM</strong> frameworks.
+                                </p>
+                            </div>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-accenture', event)">
+                                <span class="lang-es">Ver más proyectos de Accenture (OTT VoD / CoE)</span>
+                                <span class="lang-en">View more Accenture engagements (OTT / CoE)</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-accenture">
+                                <ul class="lang-es">
+                                    <li><strong>PMO & Integration Leader – OTT VoD ($3.5M USD):</strong> Programa de integración de plataforma OTT gobernando 16 relaciones con proveedores bajo SLAs formales.</li>
+                                    <li><strong>Project Manager – Consultoría TI Telco ($350K USD):</strong> Consultoría de arquitectura alineada a prácticas ITIL/eTOM con alta exposición directiva.</li>
+                                    <li><strong>Líder de Centro de Excelencia en Cambio ($190K USD):</strong> Diseño e implementación del modelo operativo de Change Management.</li>
+                                    <li><strong>PMO Leader – Supply Chain Oil & Gas ($1.2M USD):</strong> Control operativo, facturación, riesgos y seguimiento contractual.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>PMO & Integration Leader – OTT VoD ($3.5M USD):</strong> End-to-end integration program governing 16 vendors under formal SLAs.</li>
+                                    <li><strong>Project Manager – Telecom IT ($350K USD):</strong> Architecture consulting aligned with ITIL/eTOM standards under C-Suite exposure.</li>
+                                    <li><strong>Change Management CoE Lead ($190K USD):</strong> Operating model setup for Change Management Center of Excellence.</li>
+                                    <li><strong>PMO Leader – Oil & Gas Supply Chain ($1.2M USD):</strong> Contractual control, invoicing, risk, and scope governance.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">Sales: $19.5M Portfolio</span>
+                                <span class="highlight-chip">Process Standards (COBIT/ITIL/eTOM)</span>
+                                <span class="tag-chip">OTT Platform $3.5M</span>
+                                <span class="tag-chip">Vendor SLAs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 7: Bureau Veritas (Categorías: coo, delivery, standards) -->
+                    <div class="timeline-item" data-category="coo delivery standards">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Bureau Veritas</span>
+                                <span class="timeline-date">Feb 2011 – Nov 2013</span>
+                            </div>
+                            <div class="timeline-role lang-es">PMO Control Referent | Planning Lead – Programa Genoma Ecopetrol ($50M USD)</div>
+                            <div class="timeline-role lang-en">PMO Control Referent | Planning Lead – Ecopetrol Genoma Program ($50M USD)</div>
+
+                            <p class="timeline-summary lang-es"><strong>Gobernanza Operativa Nivel COO:</strong> Dirigí el control presupuestal, de planificación y métricas financieras EVM para un programa de transformación de <strong>USD 50M</strong> en 16 frentes, coordinando una fuerza laboral de <strong>360 profesionales</strong> de 4 firmas globales (Bureau Veritas, Accenture, Hays, CIO Group).</p>
+                            <p class="timeline-summary lang-en"><strong>COO Operational Rigor:</strong> Managed financial EVM control, planning, and resource balancing for a <strong>USD 50M</strong> transformation program across 16 streams, coordinating <strong>360 professionals</strong> across 4 global firms.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-bv', event)">
+                                <span class="lang-es">Ver métricas de desempeño y estándares FEL</span>
+                                <span class="lang-en">View performance metrics & FEL standards</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-bv">
+                                <ul class="lang-es">
+                                    <li><strong>Desempeño Operativo:</strong> SPI final de 1.03 y CPI de 0.94 protegiendo el margen del programa frente a cambios masivos de alcance.</li>
+                                    <li><strong>Estándares Creados:</strong> Desarrollo de herramientas automatizadas para control de alcance, KPIs de gestión y modelo FEL de madurez.</li>
+                                    <li><strong>Relacionamiento Front-End:</strong> Punto focal directo con la Oficina de Proyectos Corporativa de Ecopetrol.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>Operational Performance:</strong> Delivered final SPI 1.03 and CPI 0.94 safeguarding program margin despite massive scope shifts.</li>
+                                    <li><strong>Standards Created:</strong> Built automated project control tools, KPI tracking engines, and FEL maturity models.</li>
+                                    <li><strong>Client Relationship:</strong> Direct front-end lead facing Ecopetrol's enterprise PMO.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="highlight-chip">COO Scope ($50M Program)</span>
+                                <span class="highlight-chip">SPI 1.03 / CPI 0.94</span>
+                                <span class="tag-chip">360 Professionals</span>
+                                <span class="tag-chip">Metodología FEL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 8: Carrera Temprana (Categorías: coo, delivery, standards) -->
+                    <div class="timeline-item" data-category="coo delivery standards">
+                        <div class="timeline-icon-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-company">Carrera Temprana en Ingeniería y Operaciones</span>
+                                <span class="timeline-date">2003 – 2011</span>
+                            </div>
+                            <div class="timeline-role lang-es">Fundamentos de Planificación Operativa, Calidad y PMO</div>
+                            <div class="timeline-role lang-en">Operations Planning, Quality & PMO Foundations</div>
+
+                            <p class="timeline-summary lang-es">Experiencia formativa en planificación de producción para +300 trabajadores en ColdStar, consultoría de madurez de PMO en Keralty y desarrollo de software de seguimiento QA en UTI/Ecopetrol.</p>
+                            <p class="timeline-summary lang-en">Foundational experience in production planning for 300+ plant staff at ColdStar, PMO maturity consulting at Keralty, and QA software engineering at UTI/Ecopetrol.</p>
+
+                            <button class="timeline-toggle-btn" onclick="toggleDetails('det-early', event)">
+                                <span class="lang-es">Ver resumen de roles tempranos</span>
+                                <span class="lang-en">View early roles summary</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+
+                            <div class="timeline-details" id="det-early">
+                                <ul class="lang-es">
+                                    <li><strong>Keralty Group – Colsanitas (2010-2011):</strong> PM Engineer para portafolio de $2.8M USD.</li>
+                                    <li><strong>Gomez Project and Training (2008-2010):</strong> Consultor Junior PMP/CAPM para clientes como Cerrejón y Comfandi.</li>
+                                    <li><strong>Inversiones ColdStar (2007-2008):</strong> Jefe de Planificación de Operaciones para planta de +300 personas ($1.6M USD).</li>
+                                    <li><strong>UTI / Sensor Ecopetrol (2003-2006):</strong> QA Practitioner y desarrollador de herramientas en VB.Net/SQL.</li>
+                                </ul>
+                                <ul class="lang-en">
+                                    <li><strong>Keralty Group – Colsanitas (2010-2011):</strong> PM Engineer for $2.8M USD investment portfolio.</li>
+                                    <li><strong>Gomez Project and Training (2008-2010):</strong> Junior PMP/CAPM consultant supporting major enterprise clients.</li>
+                                    <li><strong>Inversiones ColdStar (2007-2008):</strong> Operations Planning Lead managing 300+ plant staff ($1.6M USD).</li>
+                                    <li><strong>UTI / Ecopetrol Sensor (2003-2006):</strong> QA Practitioner & VB.Net/SQL software developer.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span class="tag-chip">Keralty</span>
+                                <span class="tag-chip">ColdStar (300+ Staff)</span>
+                                <span class="tag-chip">QA & Software</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -983,8 +1662,8 @@
     <div class="contact-section" id="contacto">
         <div class="contact-container">
             <div class="contact-header">
-                <h2 class="lang-es">¿Listo para Optimizar su Operación de Delivery?</h2>
-                <h2 class="lang-en">Ready to Optimize Your Delivery Operations?</h2>
+                <h2 class="lang-es">¿Listo para Optimizar sus Operaciones y Potenciar el Crecimiento?</h2>
+                <h2 class="lang-en">Ready to Optimize Operations & Drive Business Growth?</h2>
 
                 <p class="lang-es">Complete el formulario a continuación para solicitar un diagnóstico estratégico de 30 minutos sin costo.</p>
                 <p class="lang-en">Fill out the form below to request a complimentary 30-minute strategic audit session.</p>
@@ -1025,14 +1704,14 @@
                     <label class="form-label lang-es" for="service">Servicio de Interés</label>
                     <label class="form-label lang-en" for="service">Service of Interest</label>
                     <select id="service" name="service" class="form-control">
-                        <option value="Fractional PMO & Delivery Director" class="lang-es">Fractional PMO & Delivery Director</option>
-                        <option value="AI Adoption in Delivery Operations" class="lang-es">Adopción de IA en Operaciones</option>
-                        <option value="Agile Transformation & Change" class="lang-es">Transformación Ágile & Cambio Intercultural</option>
+                        <option value="Fractional COO & Delivery Director" class="lang-es">Fractional COO & Delivery Director</option>
+                        <option value="Commercial Growth & Account Scaling" class="lang-es">Crecimiento Comercial & Ventas</option>
+                        <option value="Process Standardization & AI Integration" class="lang-es">Estándares de Proceso e IA</option>
                         <option value="Diagnóstico Operativo General" class="lang-es">Diagnóstico Operativo General</option>
                         
-                        <option value="Fractional PMO & Delivery Director" class="lang-en">Fractional PMO & Delivery Director</option>
-                        <option value="AI Adoption in Delivery Operations" class="lang-en">AI Adoption in Delivery Operations</option>
-                        <option value="Agile Transformation & Change" class="lang-en">Agile Transformation & Cross-Cultural Change</option>
+                        <option value="Fractional COO & Delivery Director" class="lang-en">Fractional COO & Delivery Director</option>
+                        <option value="Commercial Growth & Account Scaling" class="lang-en">Commercial Growth & Account Scaling</option>
+                        <option value="Process Standardization & AI Integration" class="lang-en">Process Standardization & AI Integration</option>
                         <option value="General Operational Audit" class="lang-en">General Operational Audit</option>
                     </select>
                 </div>
@@ -1051,17 +1730,65 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Daniel Antonio Castañeda Forero — Fractional PMO & Delivery Excellence Director.</p>
+        <p>© 2026 Daniel Antonio Castañeda Forero — Fractional COO & Delivery Excellence Director.</p>
         <p class="lang-es">Disponible para engagements remotos globales y presenciales en LATAM.</p>
         <p class="lang-en">Available for global remote engagements and on-site in LATAM.</p>
     </footer>
 
-    <!-- Script para cambiar el idioma -->
+    <!-- Scripts de Interacción -->
     <script>
+        // Cambiar Idioma
         function switchLang(lang) {
             document.body.className = 'lang-' + lang;
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+
+        // Script de Filtrado Preciso para la Línea de Tiempo
+        function filterTimeline(category, evt) {
+            const items = document.querySelectorAll('.timeline-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Actualizar estado del botón seleccionado
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            }
+
+            // Filtrar elementos de la línea de tiempo
+            items.forEach(item => {
+                const categories = item.dataset.category ? item.dataset.category.split(' ') : [];
+                
+                if (category === 'all' || categories.includes(category)) {
+                    item.classList.remove('is-hidden');
+                    // Suave animación de aparición
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    item.classList.add('is-hidden');
+                }
+            });
+        }
+
+        // Expandir / Ocultar Detalles de Experiencia
+        function toggleDetails(id, evt) {
+            const detailEl = document.getElementById(id);
+            const btn = evt.currentTarget;
+            const svgIcon = btn.querySelector('svg');
+
+            if (detailEl.style.maxHeight && detailEl.style.maxHeight !== '0px') {
+                detailEl.style.maxHeight = '0px';
+                detailEl.style.paddingTop = '0px';
+                if (svgIcon) svgIcon.style.transform = 'rotate(0deg)';
+            } else {
+                detailEl.style.maxHeight = detailEl.scrollHeight + 100 + 'px';
+                detailEl.style.paddingTop = '1rem';
+                if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+            }
         }
     </script>
 
